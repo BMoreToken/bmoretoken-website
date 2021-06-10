@@ -1,88 +1,287 @@
-# Login with MetaMask
+# web3.php
 
-[![Build Status](https://travis-ci.org/amaurymartiny/login-with-metamask-demo.svg?branch=master)](https://travis-ci.org/amaurymartiny/login-with-metamask-demo)
-[![David (backend)](<https://img.shields.io/david/amaurymartiny/login-with-metamask-demo.svg?label=deps%20(backend)&path=packages/backend>)](https://david-dm.org/amaurymartiny/login-with-metamask-demo?path=packages/backend)
-[![David (frontend)](<https://img.shields.io/david/amaurymartiny/login-with-metamask-demo.svg?label=deps%20(frontend)&path=packages/frontend>)](https://david-dm.org/amaurymartiny/login-with-metamask-demo?path=packages/frontend)
+[![Build Status](https://travis-ci.org/sc0Vu/web3.php.svg?branch=master)](https://travis-ci.org/sc0Vu/web3.php)
+[![codecov](https://codecov.io/gh/sc0Vu/web3.php/branch/master/graph/badge.svg)](https://codecov.io/gh/sc0Vu/web3.php)
+[![Join the chat at https://gitter.im/web3-php/web3.php](https://img.shields.io/badge/gitter-join%20chat-brightgreen.svg)](https://gitter.im/web3-php/web3.php)
+[![Licensed under the MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/sc0Vu/web3.php/blob/master/LICENSE)
 
-This demo is published as part of the corresponding blog article: ["One-Click Login with Blockchain: a MetaMask Tutorial"](https://www.toptal.com/ethereum/one-click-login-flows-a-metamask-tutorial).
 
-> ❗Important note. The article was written in March 2018, and in between, MetaMask introduced a [breaking change](https://medium.com/metamask/https-medium-com-metamask-breaking-change-injecting-web3-7722797916a8). The codebase has since then been updated to support the breaking change (as well as some other improvements such as TypeScript and updating to Web3 v1.0).
+A php interface for interacting with the Ethereum blockchain and ecosystem.
 
-> As such, the snippets in the article might not be exactly the same as the updated code today. The login flow however is still exactly the same. If you want to see the original code, please visit the [`original` branch](https://github.com/amaurymartiny/login-with-metamask-demo/tree/original).
+# Install
 
-## Live Demo
-
-The working app can be seen here: http://amaurymartiny.com/login-with-metamask-demo/.
-
-The backend is hosted on Now by Zeit: https://login-with-metamask.now.sh/api/users
-
-![demo](https://uploads.toptal.io/blog/image/125794/toptal-blog-image-1522395423193-b3227ea1f43c6cbb9f78e090bd7bb2ee.gif)
-
-## Getting Started
-
-I use [lerna](https://github.com/lerna/lerna) to manage a monorepo of packages here. There are 2 packages: a [`backend`](https://github.com/amaurymartiny/login-with-metamask-demo/tree/master/packages/backend) which is a REST API written in Express, and a [`frontend`](https://github.com/amaurymartiny/login-with-metamask-demo/tree/master/packages/frontend) which is a React single-page application. It's really a demo, so I tried to use as few libraries as possible, and the most popular ones when possible.
-
-The simplest way to get started is to launch the demo using Docker Compose. Alternatively you could launch docker the containers manually, or run the node services using yarn.
-
-#### Launch the demo using Docker Compose:
-
-```bash
-docker-compose up -d
+Set minimum stability to dev
+```
+"minimum-stability": "dev"
 ```
 
-This will leave a the bakcend listening on `localhost:8000` and the frontend on `localhost:3000`.
-
-#### Launching the demo using Docker:
-
-Build and launch the backend:
-
-```bash
-cd backend
-docker build -t login-backend .
-docker run -d -p 8000:8000 login-backend
+Then
+```
+composer require sc0vu/web3.php dev-master
 ```
 
-Build and launch the frontend:
+Or you can add this line in composer.json
 
-```bash
-cd frontend
-docker build -t login-front .
-docker run -d -p 3000:3000 login-frontend
+```
+"sc0vu/web3.php": "dev-master"
 ```
 
-You can then access the app on `localhost:3000`.
 
-#### Start the demo using Yarn:
+# Usage
 
-From the root folder of this repo, run
+### New instance
+```php
+use Web3\Web3;
 
-```bash
-yarn install # Install the dependencies
-yarn start # Will launch the frontend and the backend at the same time
+$web3 = new Web3('http://localhost:8545');
 ```
 
-The backend should be running on `localhost:8000`, and the frontend on `localhost:3000`.
+### Using provider
+```php
+use Web3\Web3;
+use Web3\Providers\HttpProvider;
+use Web3\RequestManagers\HttpRequestManager;
 
-Alternatively, you can start the frontend and the backend separately:
+$web3 = new Web3(new HttpProvider(new HttpRequestManager('http://localhost:8545')));
 
-```bash
-# Start the backend
-cd packages/backend
-yarn start
-
-# Start the frontend
-cd packages/frontend
-yarn start
+// timeout
+$web3 = new Web3(new HttpProvider(new HttpRequestManager('http://localhost:8545', 0.1)));
 ```
 
-## Tests
+### You can use callback to each rpc call:
+```php
+$web3->clientVersion(function ($err, $version) {
+    if ($err !== null) {
+        // do something
+        return;
+    }
+    if (isset($client)) {
+        echo 'Client version: ' . $version;
+    }
+});
+```
 
-Since this project is a demo, I haven't written any tests for it. Only code linting is performed, via prettier, which you can run using `yarn lint`.
+### Eth
+```php
+use Web3\Web3;
 
-## Credits
+$web3 = new Web3('http://localhost:8545');
+$eth = $web3->eth;
+```
 
-This demo is created by Amaury Martiny. If you liked this demo, I appreciate small donations. My Ethereum address is `0xa395447BF15f7525484C0378c76627D45ADE0B96`.
+Or
 
----
+```php
+use Web3\Eth;
 
-This demo is published as part of the corresponding blog article at [https://www.toptal.com/ethereum/one-click-login-flows-a-metamask-tutorial](https://www.toptal.com/ethereum/one-click-login-flows-a-metamask-tutorial).
+$eth = new Eth('http://localhost:8545');
+```
+
+### Net
+```php
+use Web3\Web3;
+
+$web3 = new Web3('http://localhost:8545');
+$net = $web3->net;
+```
+
+Or
+
+```php
+use Web3\Net;
+
+$net = new Net('http://localhost:8545');
+```
+
+### Batch
+
+web3
+```php
+$web3->batch(true);
+$web3->clientVersion();
+$web3->hash('0x1234');
+$web3->execute(function ($err, $data) {
+    if ($err !== null) {
+        // do something
+        // it may throw exception or array of exception depends on error type
+        // connection error: throw exception
+        // json rpc error: array of exception
+        return;
+    }
+    // do something
+});
+```
+
+eth
+
+```php
+$eth->batch(true);
+$eth->protocolVersion();
+$eth->syncing();
+
+$eth->provider->execute(function ($err, $data) {
+    if ($err !== null) {
+        // do something
+        return;
+    }
+    // do something
+});
+```
+
+net
+```php
+$net->batch(true);
+$net->version();
+$net->listening();
+
+$net->provider->execute(function ($err, $data) {
+    if ($err !== null) {
+        // do something
+        return;
+    }
+    // do something
+});
+```
+
+personal
+```php
+$personal->batch(true);
+$personal->listAccounts();
+$personal->newAccount('123456');
+
+$personal->provider->execute(function ($err, $data) {
+    if ($err !== null) {
+        // do something
+        return;
+    }
+    // do something
+});
+```
+
+### Contract
+
+```php
+use Web3\Contract;
+
+$contract = new Contract('http://localhost:8545', $abi);
+
+// deploy contract
+$contract->bytecode($bytecode)->new($params, $callback);
+
+// call contract function
+$contract->at($contractAddress)->call($functionName, $params, $callback);
+
+// change function state
+$contract->at($contractAddress)->send($functionName, $params, $callback);
+
+// estimate deploy contract gas
+$contract->bytecode($bytecode)->estimateGas($params, $callback);
+
+// estimate function gas
+$contract->at($contractAddress)->estimateGas($functionName, $params, $callback);
+
+// get constructor data
+$constructorData = $contract->bytecode($bytecode)->getData($params);
+
+// get function data
+$functionData = $contract->at($contractAddress)->getData($functionName, $params);
+```
+
+# Assign value to outside scope(from callback scope to outside scope)
+Due to callback is not like javascript callback, 
+if we need to assign value to outside scope, 
+we need to assign reference to callback.
+```php
+$newAccount = '';
+
+$web3->personal->newAccount('123456', function ($err, $account) use (&$newAccount) {
+    if ($err !== null) {
+        echo 'Error: ' . $err->getMessage();
+        return;
+    }
+    $newAccount = $account;
+    echo 'New account: ' . $account . PHP_EOL;
+});
+```
+
+# Examples
+
+To run examples, you need to run ethereum blockchain local (testrpc).
+
+If you are using docker as development machain, you can try [ethdock](https://github.com/sc0vu/ethdock) to run local ethereum blockchain, just simply run `docker-compose up -d testrpc` and expose the `8545` port.
+
+# Develop
+
+### Local php cli installed
+
+1. Clone the repo and install packages.
+```
+git clone https://github.com/sc0Vu/web3.php.git && cd web3.php && composer install
+```
+
+2. Run test script.
+```
+vendor/bin/phpunit
+```
+
+### Docker container
+
+1. Clone the repo and run docker container.
+```
+git clone https://github.com/sc0Vu/web3.php.git
+```
+
+2. Copy web3.php to web3.php/docker/app directory and start container.
+```
+cp files docker/app && docker-compose up -d php ganache
+```
+
+3. Enter php container and install packages.
+```
+docker-compose exec php ash
+```
+
+4. Change testHost in `TestCase.php`
+```
+/**
+ * testHost
+ * 
+ * @var string
+ */
+protected $testHost = 'http://ganache:8545';
+```
+
+5. Run test script
+```
+vendor/bin/phpunit
+```
+
+###### Install packages
+Enter container first
+```
+docker-compose exec php ash
+```
+
+1. gmp
+```
+apk add gmp-dev
+docker-php-ext-install gmp
+```
+
+2. bcmath
+```
+docker-php-ext-install bcmath
+```
+
+###### Remove extension
+Move the extension config from `/usr/local/etc/php/conf.d/`
+```
+mv /usr/local/etc/php/conf.d/extension-config-name to/directory
+```
+
+# API
+
+Todo.
+
+# License
+MIT
