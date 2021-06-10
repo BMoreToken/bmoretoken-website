@@ -1,7 +1,21 @@
 <?PHP 
 require __DIR__ . "/vendor/autoload.php";
+
 use Web3\Web3;
+
 $web3 = new Web3('http://localhost:8545');
+
+$eth = $web3->eth;
+
+$eth->getBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376',function ($err, $data) {
+  if ($err !== null) { 
+    echo $err->getMessage();
+    return false;
+  } else {
+    echo json_encode($data);
+    return true;
+  }
+});
 
 // let's proceede
 include_once('menu.php'); 
