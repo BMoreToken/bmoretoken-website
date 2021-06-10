@@ -1,5 +1,4 @@
 <?PHP 
-require('vendor/autoload.php');
 
 use Web3\Web3;
 
