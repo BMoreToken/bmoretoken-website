@@ -1,4 +1,5 @@
 <?PHP 
+/*
 require __DIR__ . "/vendor/autoload.php";
 
 use Web3\Web3;
@@ -16,7 +17,8 @@ $eth->getBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376',function ($err, $d
     return true;
   }
 });
-
+echo "<hr>";
+*/
 // let's proceede
 include_once('menu.php'); 
 ?>
