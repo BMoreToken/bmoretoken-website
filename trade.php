@@ -1,15 +1,12 @@
 <?PHP 
+
 use Web3\Web3;
-use Web3\Providers\HttpProvider;
-use Web3\RequestManagers\HttpRequestManager;
 
-$web3 = new Web3(new HttpProvider(new HttpRequestManager('http://localhost:8545')));
+$web3 = new Web3('http://localhost:8545');
 
-// timeout
-$web3 = new Web3(new HttpProvider(new HttpRequestManager('http://localhost:8545', 0.1)));
+include_once('menu.php'); 
 
-
-include_once('menu.php'); ?>
+?>
 
 
 <div class="container">
