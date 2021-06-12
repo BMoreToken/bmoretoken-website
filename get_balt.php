@@ -1,4 +1,5 @@
 <?PHP
+$title = 'Get 1 $BALT for FREE this Friday!';
 include_once("menu.php");
 ?>
 <div class="container">
