@@ -27,11 +27,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}",
 		dataPoints: [
-			{ y: 8117.07, label: "Immediate Trading" },
-			{ y: 1000000.00, label: "Future Trading" },
-			{ y: 100000, label: "Bounties" },
 			{ y: 1500000.00, label: "Community Projects and Airdrops" },
+			{ y: 1000000.00, label: "Trading" },
 			{ y: 900000, label: "Team" },
+			{ y: 100000, label: "Bounties" },
 			{ y: 447960, label: "Owner" }
 		]
 	}]
