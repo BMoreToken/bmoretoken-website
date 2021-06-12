@@ -12,6 +12,7 @@ if (isset($_GET['drop'])){
 <center>
   Address **NOT** Added for Next Friday's Drop. Maybe Try Again?
 </center>
-<?PHP}
+<?PHP
+}
 include_once("footer.php");
 ?>
