@@ -22,7 +22,7 @@ include_once('menu.php');
         <a type="button" class="btn btn-primary btn-lg btn-block" href='https://blockchain.coinmarketcap.com/address/ethereum/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>CoinMarketCap</a>
       </div> 
       <div class="col-md-auto">
-        <a type="button" class="btn btn-primary btn-lg btn-block" href='https://github.com/insidenothing/BMoreToken'>GitHub</a>
+        <a type="button" class="btn btn-primary btn-lg btn-block" href='https://www.tradingview.com/chart/?symbol=SUSHISWAP%3ABALTWETH'>TradingView</a>
       </div>
         
     </div>
