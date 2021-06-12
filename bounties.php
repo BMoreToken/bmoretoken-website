@@ -4,18 +4,18 @@
 <div class="container">
  
 <center>    
- <img src='logo.png' class="img-fluid" alt="Responsive image">
+ <img src='BMoreToken_500x500.png' class="img-fluid" alt="Responsive image">
 
 
     <div class="row justify-content-md-center">
      <div class="col-md-auto">
-       New Logo : [Make an Offer] BALT
+      <h3>New Logo Set 500x500, 256x256, 32x32: [Make an Offer] BALT</h3>
       </div>
       <div class="col-md-auto">
-        Static Website Redesign : [Make an Offer] BALT
+        <h3>Static Website Redesign, bootstrap@5 : [Make an Offer] BALT</h3>
       </div> 
       <div class="col-md-auto">
-        [Have an Idea] : [Make an Offer] BALT
+        <h3>[Have an Idea] : [Make an Offer] BALT</h3>
       </div>
         
     </div>
