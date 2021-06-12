@@ -1,4 +1,4 @@
-<?PHP include_once('menu.php'); ?>
+<?PHP $title = 'Collect Bounties for $BALT'; include_once('menu.php'); ?>
 
 
 <div class="container">
