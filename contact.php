@@ -1,10 +1,12 @@
-<?PHP include_once('menu.php'); ?>
+<?PHP $title = 'BMoreToken Project Contacts'; include_once('menu.php'); ?>
 
 <div class="container">
  
 <center>    
- <img src='logo.png' class="img-fluid" alt="Responsive image">
+ <img src='BMoreToken_500x500.png' class="img-fluid" alt="Responsive image">
 
+ <br>
+ <br>
  
   <div class="row justify-content-md-center">
       <div class="col-md-auto">
@@ -25,7 +27,9 @@
     </div>
  
  
+ <br>
  
+ <br>
 
     <div class="row justify-content-md-center">
       <div class="col-md-auto">
@@ -43,6 +47,8 @@
     </div>
 
 
+ <br>
+ <br>
 
 
 </div>
