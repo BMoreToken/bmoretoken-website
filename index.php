@@ -8,8 +8,8 @@ include_once('menu.php');
  <img src='BMoreToken_500x500.png' class="img-fluid" alt="Responsive image">
  <p>Max Total Supply: 3,947,960 BALT</p>
  <p>Current Circulation: 8,117.07 BALT</p>
- <p>Holders: 6</p>
- <p>Transfers: 11</p>
+ <p>Holders: 5</p>
+ <p>Transfers: 13</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
 </pre>
  </center>
