@@ -15,6 +15,22 @@ if (isset($_GET['drop'])){
   <?PHP echo $message; ?>
 </center>
 
+
+
+<b>Successful Response (should be blank):</b>
+<div id="success"></div>
+<b>Error Response:</b>
+<div id="error"></div>
+ 
+<script>
+$( "#success" ).load( "https://www.bmorecoin.com/next_drop.php", function( response, status, xhr ) {
+  if ( status == "error" ) {
+    var msg = "Sorry but there was an error: ";
+    $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+  }
+});
+</script>
+
 <?PHP
 include_once("footer.php");
 ?>
