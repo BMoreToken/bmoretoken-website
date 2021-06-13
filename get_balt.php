@@ -12,6 +12,18 @@ include_once("menu.php");
           <input class="btn btn-success" name='submit' value='Get 1 BALT for FREE this Friday!' type="Submit"></center>
         </div>
       </form> 
+      <hr>
+      <h3>Addresses in Next Drop</h3>
+      <div id="success"></div>
+      <div id="error"></div>
+      <script>
+      $( "#success" ).load( "https://www.bmorecoin.com/next_drop.php", function( response, status, xhr ) {
+        if ( status == "error" ) {
+          var msg = "Sorry but there was an error: ";
+          $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+        }
+      });
+      </script>
     </div>
   </div>
 </div>
