@@ -15,11 +15,8 @@ if (isset($_GET['drop'])){
   <?PHP echo $message; ?>
 </center>
 
-
-
-<b>Successful Response (should be blank):</b>
+<h3>Addresses in Next Drop</h3>
 <div id="success"></div>
-<b>Error Response:</b>
 <div id="error"></div>
  
 <script>
