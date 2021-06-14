@@ -50,7 +50,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="/team.php">Team</a>
       </li>
-	      
+	     
+      <li class="nav-item active">
+        <a class="nav-link" href="/roadmap.php">Roadmap</a>
+      </li>
+	     
       <li class="nav-item active">
         <a class="nav-link" href="/bounties.php">Bounties</a>
       </li>
