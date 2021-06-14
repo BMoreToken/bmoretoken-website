@@ -18,7 +18,7 @@
       <li>Needs Better Defined Project Team</li>
       <li>Needs Much More Activity on Public Social Media</li>
      <h1>Ideas</h1>
-     <li>Minable Coin to interact with: BALTx</li>
+     <li>Minable Coin to interact with BMoreToken (BALT): BMoreCoin (CN/BALT)</li>
      <li>Payment Gateway for Businesses</li>
      <li>Burn x BALT when O's or Ravens Win</li>
     </div>
