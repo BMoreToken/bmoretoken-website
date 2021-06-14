@@ -72,4 +72,6 @@
     </div>
   </div>
 </nav>
-	
+<div style='background-color:#15243c; text-align:center;'>
+ <img src='BMoreToken_1500x200.png' class="img-fluid" alt="Responsive image">
+</div> 	
