@@ -11,7 +11,7 @@
        <h3>Static Website Redesign, bootstrap@5</h3>
        <h3>Edit Project Writeup ~500 words</h3>
        <h3>Edit Project Tagline ~20 words</h3>
-       <h3>Referral of new team member</h3>
+       <h3>Referral of new team members</h3>
        <h3>Promotions</h3>   
        <h3>Start a proper BitcoinTalk thread</h3>
     </div>
