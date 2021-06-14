@@ -3,7 +3,6 @@
 <div class="container">
  
 <center>    
- <img src='BMoreToken_500x500.png' class="img-fluid" alt="Responsive image">
 
  <br>
  <br>
