@@ -14,7 +14,7 @@
      <h3>Edit Project Writeup ~500 words</h3>
      <h3>Edit Project Tagline ~20 words</h3>
      <h3>Referral of new team member</h3>
-
+     <h3>Promotions</h3>
         
     </div>
 
