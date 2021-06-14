@@ -5,7 +5,7 @@
 <center>
 <div class="container">
  <center>    
-    <div class="row" style='text-align:left;border:solid 1px red;'>
+    <div class="row" style='text-align:left;'>
       <h1>Active Projects This Week (Last Contact)</h1>
       <h3>https://coinmarketcap.com  (6/8/21)</h3>
       <h3>https://www.coingecko.com  (6/8/21)</h3>
