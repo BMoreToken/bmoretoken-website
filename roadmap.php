@@ -6,12 +6,12 @@
 <div class="container">
  <center>    
     <div class="row" style='text-align:left;'>
-      <h1>Active Projects This Week (Last Contact)</h1>
+      <h1>Active Projects (Last Contact)</h1>
       <h3>https://coinmarketcap.com  (6/8/21)</h3>
       <h3>https://www.coingecko.com  (6/8/21)</h3>
       <h3>AnySwap (6/8/21)</h3>
       <li>Needs CG Link</li>
-      <li>Make Sure it Comes from Official Project E-Mail Address</li>
+      <li>Respond from Official Project E-Mail Address</li>
       <h3>https://etherscan.io (6/13/21)</h3>
       <li>Needs Clearer Project Description - Long</li>
       <li>Needs Clearer Project Description - Short</li>
