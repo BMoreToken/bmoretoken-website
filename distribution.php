@@ -1,13 +1,6 @@
 <?PHP include_once('menu.php'); ?>
-
 <div class="container">
- 
 <center>    
- 
- <h1>TRIAL NUMBERS</h1>
- 
- 
-
 <script>
 window.onload = function() {
 //total supply = 3,947,960
@@ -27,9 +20,10 @@ var chart = new CanvasJS.Chart("chartContainer", {
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}",
 		dataPoints: [
-			{ y: 1500000.00, label: "Community Projects and Airdrops" },
+			{ y: 1000000.00, label: "Community Projects and Airdrops" },
 			{ y: 1000000.00, label: "Trading" },
 			{ y: 900000, label: "Team" },
+			{ y: 500000, label: "Deprecatory Mechanisms" },
 			{ y: 100000, label: "Bounties" },
 			{ y: 447960, label: "Owner" }
 		]
@@ -41,7 +35,7 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 	exportEnabled: true,
 	animationEnabled: true,
 	title: {
-		text: "Actual Distribution"
+		text: "Current Distribution"
 	},
 	data: [{
 		type: "pie",
@@ -52,7 +46,8 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		indexLabelFontSize: 16,
 		indexLabel: "{label} - {y}",
 		dataPoints: [
-			{ y: 7967.07, label: "Trading" }
+			{ y: 5790, label: "Public Trading" },
+			{ y: 800, label: "Public Holding" }
 		]
 	}]
 });
