@@ -1,6 +1,4 @@
 <?PHP include_once('menu.php'); ?>
-<div class="container">
-<center>    
 <script>
 window.onload = function() {
 //total supply = 3,947,960
@@ -54,19 +52,19 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 chart2.render();
 }
 </script>
-
-<div id="chartContainer" style="height: 400px; width: 100%;"></div>
-<div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div class="col-md-auto">
+	     		<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+		</div>
+	   	<div class="col-md-auto">
+	     		<div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+		</div>
+	</div>
+</div>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
- 
- 
-  
- <img src='dist.jpg' class="img-fluid" alt="Responsive image">
-  
- </center> 
-  
-  </div>
+</center> 
+</div>
 
 
 
