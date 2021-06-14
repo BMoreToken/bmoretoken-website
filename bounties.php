@@ -1,7 +1,4 @@
 <?PHP $title = 'Collect Bounties for $BALT'; include_once('menu.php'); ?>
-<div style='background-color:#15243c; text-align:center;'>
- <img src='BMoreToken_1500x200.png' class="img-fluid" alt="Responsive image">
-</div> 
 <div class="container">
  <center>    
    <div class="row justify-content-md-center">
