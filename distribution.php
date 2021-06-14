@@ -54,11 +54,11 @@ chart2.render();
 </script>
 <div class="container">
 	<div class="row justify-content-md-center">
-		<div class="col-md-auto">
-	     		<div id="chartContainer" style="height: 400px; width: 100%;"></div>
+		<div class="col-md-auto" style="height: 400px; width: 400px;">
+	     		<div id="chartContainer" style="height: 400px; width: 400px;"></div>
 		</div>
-	   	<div class="col-md-auto">
-	     		<div id="chartContainer2" style="height: 400px; width: 100%;"></div>
+	   	<div class="col-md-auto" style="height: 400px; width: 400px;">
+	     		<div id="chartContainer2" style="height: 400px; width: 400px;"></div>
 		</div>
 	</div>
 </div>
