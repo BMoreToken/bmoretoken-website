@@ -15,13 +15,16 @@ include_once('menu.php');
  </center>
     <div class="row justify-content-md-center">
      <div class="col-md-auto">
+       <a type="button" class="btn btn-success btn-lg btn-block" href='https://analytics.sushi.com/pairs/0x08cd7cf527330f10571fb7947256bf0c8b38afc4'>SushiSwap Analytics</a>
+     </div>
+     <div class="col-md-auto">
        <a type="button" class="btn btn-primary btn-lg btn-block" href='https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>EtherScan</a>
       </div>
       <div class="col-md-auto">
-        <a type="button" class="btn btn-primary btn-lg btn-block" href='https://blockchain.coinmarketcap.com/address/ethereum/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>CoinMarketCap</a>
+        <a type="button" class="btn btn-info btn-lg btn-block" href='https://blockchain.coinmarketcap.com/address/ethereum/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>CoinMarketCap</a>
       </div> 
       <div class="col-md-auto">
-        <a type="button" class="btn btn-primary btn-lg btn-block" href='https://www.tradingview.com/chart/?symbol=SUSHISWAP%3ABALTWETH'>TradingView</a>
+        <a type="button" class="btn btn-warning btn-lg btn-block" href='https://www.tradingview.com/chart/?symbol=SUSHISWAP%3ABALTWETH'>TradingView</a>
       </div>
         
     </div>
