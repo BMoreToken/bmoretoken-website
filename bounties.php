@@ -17,7 +17,7 @@
      <h3>Promotions</h3>
         
     </div>
-
+ </center>
 </div>
 
   
