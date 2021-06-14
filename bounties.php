@@ -4,7 +4,7 @@
 <div class="container">
  
 <center>    
- <img src='BMoreToken_500x500.png' class="img-fluid" alt="Responsive image">
+ <img src='BMoreToken_1500x200.png' class="img-fluid" alt="Responsive image">
 
 
     <div class="row justify-content-md-center">
