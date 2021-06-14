@@ -9,7 +9,7 @@
 
     <div class="row justify-content-md-center">
      <h1>Paid Offers:</h1>
-     <h3>New Logo Set 500x500, 256x256, 32x32</h3>
+     <h3>New Logo Set 1500x200 500x500, 256x256, 32x32</h3>
      <h3>Static Website Redesign, bootstrap@5</h3>
      <h3>Edit Project Writeup ~500 words</h3>
      <h3>Edit Project Tagline ~20 words</h3>
