@@ -1,7 +1,11 @@
 <?PHP $title = 'Project Roadmap for $BALT'; include_once('menu.php'); ?>
+<style>
+ @media (min-width:1025px) { .container { width: 50% !important;} }
+</style>
+<center>
 <div class="container">
  <center>    
-    <div class="row justify-content-md-center">
+    <div class="row">
       <h1>Active Projects This Week (Last Contact)</h1>
       <h3>https://coinmarketcap.com  (6/8/21)</h3>
       <h3>https://www.coingecko.com  (6/8/21)</h3>
@@ -18,6 +22,6 @@
      <li>Payment Gateway for Businesses</li>
      <li>Burn x BALT when O's or Ravens Win</li>
     </div>
-  </center>
 </div>
+</center>
 <?PHP include_once('footer.php');
