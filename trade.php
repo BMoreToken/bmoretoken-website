@@ -8,9 +8,6 @@ include_once('menu.php');
 <center>    
   <br> <br>
     <div class="row justify-content-md-center">
-      <div class="col-md-auto">
-       <a type="button" class="btn btn-success btn-lg btn-block" href='https://analytics.sushi.com/tokens/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>SushiSwap Analytics</a>
-      </div>
       
       <div class="col-md-auto">
         <a type="button" class="btn btn-success btn-lg btn-block" href='https://exchange.sushiswapclassic.org/#/add/0xbdd4f273c2b0f0b84a51bd733aac617d91159376/ETH'>SushiSwap Add Liquidity</a>
