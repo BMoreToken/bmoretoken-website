@@ -5,10 +5,10 @@
   <table class="table table-striped">
    <tr>
     <td valign="top" align="right"><img src="1537101314639.jpg"></td>
-    <td valign="middle" align="left"><h3>Patrick McGuire<br>Finance and Technology</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/baltimorehacker'>linkedin</a></td>
+    <td valign="middle" align="left"><h3>Patrick McGuire<br>Finance and Technology</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/baltimorehacker'>LinkedIn</a></td>
    </tr>
    <tr>
-    <td valign="middle" align="right"><h3>JT Runner II<br>Media Relations</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>linkedin</a></td>
+    <td valign="middle" align="right"><h3>JT Runner II<br>Media Relations</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>LinkedIn</a></td>
     <td valign="top" align="left"><img src="1528373984428.jpg"></td>
    </tr>
   </table>
