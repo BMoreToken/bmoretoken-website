@@ -45,7 +45,8 @@ var chart2 = new CanvasJS.Chart("chartContainer2", {
 		indexLabel: "{label} - {y}",
 		dataPoints: [
 			{ y: 5790, label: "Public Trading" },
-			{ y: 800, label: "Public Holding" }
+			{ y: 800, label: "Public Holding" },
+			{ y: 100, label: "Team" }
 		]
 	}]
 });
