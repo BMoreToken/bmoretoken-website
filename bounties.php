@@ -6,13 +6,16 @@
 <div class="container">
  <center>    
     <div class="row" style='text-align:left;'>
-     <h1>Paid Offers:</h1>
+     <h1>Active Offers for <?PHP echo date('m/d/y');?></h1>
+     <h3>Graphics and Design</h3>
        <li>New Logo Set</li>
        <li>Static Website Redesign, bootstrap@5</li>
-       <li>Edit Project Writeup ~500 words</li>
-       <li>Edit Project Tagline ~20 words</li>
-       <li>PR Pitch ~55 characters</li>
-       <li>Referral of new team members</li>
+     <h3>Writing</h3>
+       <li>Edit Project Writeup ~500 words <a href='/project_description_long.php'>LINK</a></li>
+       <li>Edit Project Tagline ~20 words <a href='/project_description_short.php'>LINK</a></li>
+       <li>PR Pitch ~55 characters <a href='/pitches.php'>LINK</a></li>
+     <h3>Miscellaneous</h3>
+       <li>Referral of new team members <a href='/join.php'>LINK</a></li>
        <li>Promotions</li>   
        <li>Start a proper BitcoinTalk thread</li>
     </div>
