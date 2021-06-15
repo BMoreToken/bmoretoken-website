@@ -12,7 +12,7 @@
       <li>2021-06-10 SSL, Web3</li>
       <li>2021-06-11 List Bounties </li>
       <li>2021-06-12 Increase Liquidity</li>
-      <li>2021-06-13 Social Media Day</li>
+      <li>2021-06-13 Social Media Day, Start Contacting Local Companies</li>
       <li>2021-06-14 Google form to Join Team</li>
       <li>2021-06-15 History Page</li>
     </div>
