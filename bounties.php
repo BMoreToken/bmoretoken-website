@@ -6,14 +6,15 @@
 <div class="container">
  <center>    
     <div class="row" style='text-align:left;'>
-     <h1>Paid Offers: ( lack of time or skill so we outsource )</h1>
-       <h3>New Logo Set 1500x200 500x500, 256x256, 32x32</h3>
-       <h3>Static Website Redesign, bootstrap@5</h3>
-       <h3>Edit Project Writeup ~500 words</h3>
-       <h3>Edit Project Tagline ~20 words</h3>
-       <h3>Referral of new team members</h3>
-       <h3>Promotions</h3>   
-       <h3>Start a proper BitcoinTalk thread</h3>
+     <h1>Paid Offers:</h1>
+       <li>New Logo Set</li>
+       <li>Static Website Redesign, bootstrap@5</li>
+       <li>Edit Project Writeup ~500 words</li>
+       <li>Edit Project Tagline ~20 words</li>
+       <li>PR Pitch ~55 characters</li>
+       <li>Referral of new team members</li>
+       <li>Promotions</li>   
+       <li>Start a proper BitcoinTalk thread</li>
     </div>
  </center>
 </div>
