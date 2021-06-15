@@ -48,6 +48,10 @@
       </li>
 
       <li class="nav-item active">
+        <a class="nav-link" href="/join.php">Join</a>
+      </li>
+
+      <li class="nav-item active">
         <a class="nav-link" href="/team.php">Team</a>
       </li>
 	     
