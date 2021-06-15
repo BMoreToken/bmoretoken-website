@@ -17,6 +17,8 @@
       <li>Needs Clearer Project Description - Short</li>
       <li>Needs Better Defined Project Team</li>
       <li>Needs Much More Activity on Public Social Media</li>
+      <h3>Zerion Wallet</h3>
+       <li>https://roadmap.zerion.io/b/token-requests/bmoretoken-balt/</li>
      <h1>Ideas</h1>
      <li>Minable Coin to interact with BMoreToken (BALT): BMoreCoin (CN/BALT)</li>
      <li>Payment Gateway for Businesses</li>
