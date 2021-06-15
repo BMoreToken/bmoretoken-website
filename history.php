@@ -7,7 +7,7 @@
  <center>    
     <div class="row" style='text-align:left;'>
       <li>2021-06-07 Deploy Contract</li>
-      <li>2021-06-08 Liquidity Pool</li>
+      <li>2021-06-08 Liquidity Pool, Start Verification Processes</li>
       <li>2021-06-09 Domain, E-Mail, Web</li>
       <li>2021-06-10 SSL, Web3</li>
       <li>2021-06-11 List Bounties </li>
