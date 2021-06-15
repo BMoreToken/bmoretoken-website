@@ -56,16 +56,21 @@
       </li>
 	     
       <li class="nav-item active">
-        <a class="nav-link" href="/roadmap.php">Roadmap</a>
-      </li>
-	     
-      <li class="nav-item active">
         <a class="nav-link" href="/bounties.php">Bounties</a>
       </li>
 	      
       <li class="nav-item active">
         <a class="nav-link" href="/distribution.php">Distribution</a>
       </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="/roadmap.php">Roadmap</a>
+      </li>
+	     
+      <li class="nav-item active">
+        <a class="nav-link" href="/history.php">History</a>
+      </li>
+	     
         
       <li class="nav-item active">
         <a class="nav-link" href="/contact.php">Contact</a>
