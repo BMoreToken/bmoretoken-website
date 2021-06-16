@@ -3,9 +3,13 @@ if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
 }
 window.onload=function(){
+  
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
 
+
+  
+  
 ethereumButton.addEventListener('click', () => {
   getAccount();
 });
@@ -14,6 +18,47 @@ async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
+  
+  
+  
+  let tokenAddress = "0xbdd4f273c2b0f0b84a51bd733aac617d91159376";
+  let walletAddress = account;  
+  // The minimum ABI to get ERC20 Token balance
+  let minABI = [
+    // balanceOf
+    {
+      "constant":true,
+      "inputs":[{"name":"_owner","type":"address"}],
+      "name":"balanceOf",
+      "outputs":[{"name":"balance","type":"uint256"}],
+      "type":"function"
+    },
+    // decimals
+    {
+      "constant":true,
+      "inputs":[],
+      "name":"decimals",
+      "outputs":[{"name":"","type":"uint8"}],
+      "type":"function"
+    }
+  ];  
+  
+  // Get ERC20 Token contract instance
+  let contract = web3.eth.contract(minABI).at(tokenAddress);
+
+  // Call balanceOf function
+  contract.balanceOf(walletAddress, (error, balance) => {
+    // Get decimals
+    contract.decimals((error, decimals) => {
+      // calculate a balance
+      balance = balance.div(10**decimals);
+      showBalance.innerHTML = balance;
+      console.log(balance.toString());
+    });
+  });
+  
+  
+  
 } 
   
   
@@ -26,7 +71,7 @@ async function getAccount() {
 </script>
 
 <h2>Account: <span class="showAccount"></span></h2>
-
+<span class="showBalance"></span>
 
 <button class="enableEthereumButton">Connect MetaMask</button>
 
