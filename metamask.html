@@ -44,7 +44,7 @@ async function getAccount() {
   ];  
   
   // Get ERC20 Token contract instance
-  let contract = web3.eth.contract(minABI).at(tokenAddress);
+  let contract = ethereum.eth.contract(minABI).at(tokenAddress);
 
   // Call balanceOf function
   contract.balanceOf(walletAddress, (error, balance) => {
@@ -52,7 +52,7 @@ async function getAccount() {
     contract.decimals((error, decimals) => {
       // calculate a balance
       balance = balance.div(10**decimals);
-      showBalance.innerHTML = balance;
+      showBalance.innerHTML = balance.toString();
       console.log(balance.toString());
     });
   });
