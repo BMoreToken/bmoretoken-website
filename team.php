@@ -4,7 +4,7 @@
   <br><br>
   <table class="table table-striped">
    <tr>
-    <td valign="middle" align="left"><h3>Patrick McGuire<br>Finance and Marketing</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/katytroeschel'>LinkedIn</a></td>
+    <td valign="middle" align="left"><h3>Kathryn Troeschel<br>Finance and Marketing</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/katytroeschel'>LinkedIn</a></td>
     <td valign="top" align="left"><img src="1615304231034.jpg"></td>
    </tr>
    <tr>
@@ -12,7 +12,7 @@
     <td valign="middle" align="right"><h3>Patrick McGuire<br>Technology and Business Relations</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/baltimorehacker'>LinkedIn</a></td>
    </tr>
    <tr>
-    <td valign="middle" align="right"><h3>JT Runner II<br>Media Relations</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>LinkedIn</a></td>
+    <td valign="middle" align="right"><h3>John Runner II<br>Media Relations</h3><a type="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>LinkedIn</a></td>
     <td valign="top" align="left"><img src="1528373984428.jpg"></td>
    </tr>
   </table>
