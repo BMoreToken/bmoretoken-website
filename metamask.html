@@ -64,9 +64,18 @@ async function getAccount() {
   
   
 </script>
-
-<h2>Address: <span  id="wallet-address"  class="showAccount"></span></h2>
-<h3>BMoreToken Balance <span id="result"></span></h3>
-<button class="enableEthereumButton">Connect...</button>
+<style>
+ @media (min-width:1025px) { .container { width: 50% !important;} }
+</style>
+<center>
+<div class="container">
+  <center>    
+    <div class="row" style='text-align:left;'>
+      <button class="enableEthereumButton">Connect...</button>
+      <h2>Address: <span  id="wallet-address"  class="showAccount"></span></h2>
+      <h3>BMoreToken Balance <span id="result"></span></h3>
+    </div>
+  </center>      
+</div>
 
 
