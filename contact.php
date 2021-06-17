@@ -35,7 +35,7 @@
        <a type="button" class="btn btn-info btn-lg btn-block" href='https://t.me/joinchat/tCpLTHD_Nus2MDFh'>Telegram</a>
       </div>
       <div class="col-md-auto">
-       <a type="button" class="btn btn-info btn-lg btn-block" href='https://discord.gg/bEftGXUK'>Discord</a>
+       <a type="button" class="btn btn-info btn-lg btn-block" href='https://discord.gg/kNPGCvUDFt'>Discord</a>
       </div>
       <div class="col-md-auto">
        <a type="button" class="btn btn-info btn-lg btn-block" href='https://medium.com/bmoretoken'>Medium</a>
