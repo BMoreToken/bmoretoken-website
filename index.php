@@ -10,7 +10,7 @@ include_once('menu.php');
  <p>Holders: 7</p>
  <p>Transfers: 16</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
- <p>Liquidity: 5,790 BALT &amp; 1.135 WETH</p>
+ <p>Liquidity: 5,620 BALT &amp; 1.169 WETH</p>
 </pre>
  </center>
     <div class="row justify-content-md-center">
