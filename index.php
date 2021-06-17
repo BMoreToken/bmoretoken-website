@@ -8,9 +8,9 @@ include_once('menu.php');
  <p>Max Total Supply: 3,947,960 BALT</p>
  <p>Current Circulation: 6,690 BALT</p>
  <p>Holders: 7</p>
- <p>Transfers: 16</p>
+ <p>Transfers: 18</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
- <p>Liquidity: 5,620 BALT &amp; 1.169 WETH</p>
+ <p>Liquidity: 7,620 BALT &amp; 1.585 WETH ($3,801.53 USD)</p>
 </pre>
  </center>
     <div class="row justify-content-md-center">
