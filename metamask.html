@@ -23,10 +23,7 @@ async function getAccount() {
   showAccount.innerHTML = account;
    getERC20TokenBalance(account, (balance) => {
    document.getElementById('result').innerText = balance.toString();
-   }
-} 
-  
-  
+   } 
 }
   
   
