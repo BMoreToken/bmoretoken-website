@@ -28,38 +28,13 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	}]
 });
 chart.render();
-var chart2 = new CanvasJS.Chart("chartContainer2", {
-	theme: "light2", // "light1", "light2", "dark1", "dark2"
-	exportEnabled: true,
-	animationEnabled: true,
-	title: {
-		text: "Current Distribution"
-	},
-	data: [{
-		type: "pie",
-		startAngle: 25,
-		toolTipContent: "<b>{label}</b>: {y}",
-		showInLegend: "true",
-		legendText: "{label}",
-		indexLabelFontSize: 16,
-		indexLabel: "{label} - {y}",
-		dataPoints: [
-			{ y: 5790, label: "Public Trading" },
-			{ y: 800, label: "Public Holding" },
-			{ y: 200, label: "Team" }
-		]
-	}]
-});
-chart2.render();
 }
 </script>
 <div class="container">
 	<div class="row justify-content-md-center">
 		<div class="col-md-auto" style="height: 400px; width: 600px;">
 	     		<div id="chartContainer" style="height: 400px; width: 600px;"></div>
-		</div>
-	   	<div class="col-md-auto" style="height: 400px; width: 600px;">
-	     		<div id="chartContainer2" style="height: 400px; width: 600px;"></div>
+			<small>Track Current Distribution at <a target='_Blank' href='https://etherscan.io/token/tokenholderchart/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>https://etherscan.io/token/tokenholderchart</a></small>
 		</div>
 	</div>
 </div>
