@@ -9,9 +9,9 @@
     <div class="row" style='text-align:left; height:350px;'>
       <h1>2:1 Daily Liquidity Bonus</h1>
       <p>Add 100 BALT Liquidity get 100 BALT</p>
-      <p>Liquidity Added Here: https://app.sushi.com/add/ETH/0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</p>
-      <p>Monitor Here: https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376?a=0x08cd7cf527330f10571fb7947256bf0c8b38afc4</p>
-      <p>There is nothing for you to do, this is completely automated.</p>
+      <p>Liquidity Added Here: <a target='_Blank' href='https://app.sushi.com/add/ETH/0xbDd4f273C2b0f0B84a51BD733AAc617D91159376'>https://app.sushi.com/add/ETH/0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</a></p>
+      <p>Monitored Here: <a target='_Blank' href='https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376?a=0x08cd7cf527330f10571fb7947256bf0c8b38afc4'>https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376?a=0x08cd7cf527330f10571fb7947256bf0c8b38afc4</a></p>
+      <p>There is nothing for you to do, this is completely automated daily.</p>
     </div>
   </center>
 </div>
