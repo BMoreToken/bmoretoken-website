@@ -5,9 +5,9 @@ include_once('menu.php');
 <div class="container">
 <center>    
  <p>Baltimore Time: <?PHP echo date('r'); ?></p>
- <p>Max Total Supply: 3,947,960 BALT</p>
- <p>Holders: 7</p>
- <p>Transfers: 18</p>
+ <p>Total Supply: 3,947,960 BALT</p>
+ <p>Holders: 12</p>
+ <p>Transfers: 25</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
  <p>Liquidity: 7,620 BALT &amp; 1.585 WETH ($3,801.53 USD)</p>
 </pre>
