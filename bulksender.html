@@ -8,7 +8,7 @@ window.onload=function(){
   
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
-  
+const tokenaddress = document.querySelector('.tokenaddress');  
 const walletaddress = document.querySelector('.walletaddress');
 const baltButton = document.querySelector('.enableBaltButton');
 
@@ -28,6 +28,7 @@ async function getAccount() {
   const account = accounts[0];
   showAccount.innerHTML = account;
   walletaddress.innerHTML = account;
+  tokenaddress.innerHTML =  = '0xbdd4f273c2b0f0b84a51bd733aac617d91159376';
 } 
   
   
@@ -67,13 +68,13 @@ async function getAccount() {
         }
       ];
 
-      //  ABI とコントラクト（ERC20トークン）のアドレスから、コントラクトのインスタンスを取得 
+      
       let contract = web3.eth.contract(minABI).at(tokenAddress);
-      // 引数にウォレットのアドレスを渡して、balanceOf 関数を呼ぶ
+      
       contract.balanceOf(walletAddress, (error, balance) => {
-        // ERC20トークンの decimals を取得
+        
         contract.decimals((error, decimals) => {
-          // 残高を計算
+         
           balance = balance.div(10**decimals);
           console.log(balance.toString());
           callback(balance);
@@ -103,8 +104,8 @@ async function getAccount() {
 
       <h1>Get ERC20 Token Balance</h1>
 
-      <h2>Token Address</h2>
-      <input type="text" id="tokenaddress" size="80" oninput="onAddressChange()" value='0xbdd4f273c2b0f0b84a51bd733aac617d91159376'></input>
+      <h2>Token Address <span class="tokenaddress" id="tokenaddress"></h2>
+     <!-- <input type="text" id="tokenaddress" size="80" oninput="onAddressChange()" value='0xbdd4f273c2b0f0b84a51bd733aac617d91159376'></input> -->
 
 
       <h2>Wallet Address <span class="walletaddress" id="walletaddress"></span></h2>
