@@ -37,7 +37,7 @@ include_once('menu.php');
   <script type="text/javascript">
   new TradingView.widget(
   {
-  "width":100%,
+  "width":400,
   "height":600,
   "symbol": "SUSHISWAP:BALTWETH",
   "interval": "240",
