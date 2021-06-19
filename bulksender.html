@@ -24,7 +24,7 @@ ethereumButton.addEventListener('click', () => {
 async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
-  showAccount.innerHTML = account;
+  //showAccount.innerHTML = account;
   walletaddress.innerHTML = account;
   tokenaddress.innerHTML = '0xbdd4f273c2b0f0b84a51bd733aac617d91159376';
   getERC20TokenBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376', account, (balance) => {
