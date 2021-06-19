@@ -17,6 +17,8 @@
       <li>2021-06-15 History Page, Team Expansion: Media Relations</li>
      <li>2021-06-16 Team Expansion: Finance and Marketing</li>
      <li>2021-06-17 Contact SEC Lawyer</li>
+     <li>2021-06-18 Friday Airdrop, Team Expansion: Sr. Systems Engineer</li>
+     <li>2021-06-19 SiteMap.xml, Google/Bing Setup</li>
     </div>
 </div>
 </center>
