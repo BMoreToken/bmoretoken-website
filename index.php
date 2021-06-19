@@ -30,7 +30,7 @@ include_once('menu.php');
 
 
 <!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
+<div class="tradingview-widget-container" style='height:300px'>
   <div id="tradingview_78171"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BALTWETH Chart</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
@@ -51,12 +51,10 @@ include_once('menu.php');
 }
   );
   </script>
+ 
 </div>
 <!-- TradingView Widget END -->
 
-
-<center><img src='qr.png' class="img-fluid" alt="Responsive image"><br>
-<small>Contract Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</small></center>
     </div>
 <?PHP
 
