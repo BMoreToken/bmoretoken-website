@@ -22,9 +22,7 @@ include_once('menu.php');
       <div class="col-md-auto">
         <a target='_Blank' type="button" class="btn btn-info btn-lg btn-block" href='https://blockchain.coinmarketcap.com/address/ethereum/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>CoinMarketCap</a>
       </div> 
-      <div class="col-md-auto">
-        <a target='_Blank' type="button" class="btn btn-warning btn-lg btn-block" href='https://www.tradingview.com/chart/?symbol=SUSHISWAP%3ABALTWETH'>TradingView</a>
-      </div>
+     
         
     </div>
 
