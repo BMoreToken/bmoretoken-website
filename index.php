@@ -37,17 +37,16 @@ include_once('menu.php');
   <script type="text/javascript">
   new TradingView.widget(
   {
-  "width": 980,
-  "height": 610,
+  "autosize":true,
   "symbol": "SUSHISWAP:BALTWETH",
   "interval": "240",
   "timezone": "America/New_York",
   "theme": "light",
   "style": "1",
   "locale": "en",
-  "toolbar_bg": "#f1f3f6",
-  "enable_publishing": false,
-  "allow_symbol_change": true,
+  "toolbar_bg": "#DF4601",
+  "enable_publishing": true,
+  "allow_symbol_change": false,
   "container_id": "tradingview_78171"
 }
   );
