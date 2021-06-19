@@ -38,6 +38,7 @@ include_once('menu.php');
   new TradingView.widget(
   {
   "autosize":true,
+  "height":600,
   "symbol": "SUSHISWAP:BALTWETH",
   "interval": "240",
   "timezone": "America/New_York",
