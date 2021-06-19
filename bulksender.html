@@ -10,6 +10,7 @@ const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
 const tokenaddress = document.querySelector('.tokenaddress');  
 const walletaddress = document.querySelector('.walletaddress');
+const bulkaddress = document.querySelector('.bulkaddress');
 
 
  web3 = new Web3(web3.currentProvider);
@@ -30,6 +31,7 @@ async function getAccount() {
   getERC20TokenBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376', account, (balance) => {
           document.getElementById('result').innerText = balance.toString();
   }); 
+   bulkaddress.innerHTML = '0x2667f647402423d4a68a926a10cc06d4593a0a84';
    getERC20isVIP(account, (answer) => {
           document.getElementById('isVIP').innerText = answer.toString();
   });
@@ -105,7 +107,7 @@ async function getAccount() {
      
      <button class="enableEthereumButton">Connect MetaMask</button>
 
-      <h1>Connection:</h1>
+      <h1>BMoreToken:</h1>
 
       <h3>Token: <span class="tokenaddress" id="tokenaddress"></h3>
  
@@ -113,6 +115,8 @@ async function getAccount() {
  
       <h2>Balance: <span id="result"></span></h2>
  
+      <h1>BulkSender:</h1>
+      <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
       <h3>isVIP: <span id="isVIP"></span></h3>
         
       <h1>Send Same amount to All Addresses </h1>  
