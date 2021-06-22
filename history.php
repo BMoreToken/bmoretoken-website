@@ -19,7 +19,7 @@
      <li>2021-06-17 Contact SEC Lawyer</li>
      <li>2021-06-18 Friday Airdrop, Team Expansion: Sr. Systems Engineer</li>
      <li>2021-06-19 SiteMap.xml, Google/Bing Setup, Bulk Sending Contract</li>
-     <li>2021-06-22 Adjust Google Analytics</li>
+     <li>2021-06-22 Confirm/Adjust Google Analytics, Connect to Search Console</li>
      
     </div>
 </div>
