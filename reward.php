@@ -46,21 +46,6 @@
 </center>
 <script>
  
-$("form").on("submit", function (e) {
-    var dataString = $(this).serialize();
-     
-    $.ajax({
-      type: "POST",
-      url: "https://www.bmorecoin.com/reward.php",
-      data: dataString,
-      success: function () {
-        // Display message back to the user here
-       alert('Form Submitted');
-      }
-    });
- 
-    e.preventDefault();
-}); 
  
  
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -77,6 +62,19 @@ $("form").on("submit", function (e) {
           event.stopPropagation();
         }
         form.classList.add('was-validated');
+        function (e) { 
+         var dataString = $(this).serialize();
+          $.ajax({
+            type: "POST",
+            url: "https://www.bmorecoin.com/reward.php",
+            data: dataString,
+            success: function () {
+              // Display message back to the user here
+             alert('Form Submitted');
+            }
+          });
+         e.preventDefault();
+       }
       }, false);
     });
   }, false);
