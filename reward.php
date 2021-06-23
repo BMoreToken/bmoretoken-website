@@ -6,58 +6,27 @@
 <div class="container">
  <center>    
     <div class="row" style='text-align:left;'>
-      <form class="needs-validation" novalidate>
+      <form class="needs-validation" required>
         <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="validationCustom01">First name</label>
-            <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
+            <label for="validationCustom01">ERC20 Address</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Address" value="" required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
+       </div>
+       
+       <div class="form-row">
           <div class="col-md-4 mb-3">
-            <label for="validationCustom02">Last name</label>
-            <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
+            <label for="validationCustom01">Receipt</label>
+            <input type="file" accept="image/*" class="form-control" id="validationCustom01" placeholder="Address" value="" capture required>
             <div class="valid-feedback">
               Looks good!
             </div>
           </div>
-          <div class="col-md-4 mb-3">
-            <label for="validationCustomUsername">Username</label>
-            <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroupPrepend">@</span>
-              </div>
-              <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-              <div class="invalid-feedback">
-                Please choose a username.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="col-md-6 mb-3">
-            <label for="validationCustom03">City</label>
-            <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-            <div class="invalid-feedback">
-              Please provide a valid city.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom04">State</label>
-            <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-            <div class="invalid-feedback">
-              Please provide a valid state.
-            </div>
-          </div>
-          <div class="col-md-3 mb-3">
-            <label for="validationCustom05">Zip</label>
-            <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-            <div class="invalid-feedback">
-              Please provide a valid zip.
-            </div>
-          </div>
-        </div>
+       </div>
+      
         <div class="form-group">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -69,13 +38,31 @@
             </div>
           </div>
         </div>
-        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button class="btn btn-primary" type="submit">Claim Reward</button>
       </form>
    </div>
   </center>
   </div>
 </center>
 <script>
+ 
+$("form").on("submit", function (e) {
+    var dataString = $(this).serialize();
+     
+    $.ajax({
+      type: "POST",
+      url: "https://www.bmorecoin.com/reward.php",
+      data: dataString,
+      success: function () {
+        // Display message back to the user here
+       alert('Form Submitted');
+      }
+    });
+ 
+    e.preventDefault();
+}); 
+ 
+ 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (function() {
   'use strict';
