@@ -6,7 +6,7 @@
 <div class="container">
  <center>    
     <div class="row" style='text-align:left;'>
-      <form class="needs-validation" required>
+      <form method="POST" action="https://www.bmorecoin.com/reward.php"  class="needs-validation" required>
         <div class="form-row">
           <div class="col-md-4 mb-3">
             <label for="validationCustom01">ERC20 Address</label>
