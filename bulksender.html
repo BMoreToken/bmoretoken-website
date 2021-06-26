@@ -1,23 +1,19 @@
 <script src="web3.min.js"></script>
-
 <script>
-  
-  
 if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
 }
 window.onload=function(){
-  
+
 const ethereumButton = document.querySelector('.enableEthereumButton');
 const showAccount = document.querySelector('.showAccount');
 const tokenaddress = document.querySelector('.tokenaddress');  
 const walletaddress = document.querySelector('.walletaddress');
 const bulkaddress = document.querySelector('.bulkaddress');
-
 const batchSendButton = document.querySelector('.batchSendButton');
 
 
- web3 = new Web3(web3.currentProvider);
+web3 = new Web3(web3.currentProvider);
   
   
 ethereumButton.addEventListener('click', () => {
@@ -37,8 +33,8 @@ async function bulkSendCoinWithSameValue() {
       // ERC20
       let bulk_sending_ABI = [{"constant":true,"inputs":[],"name":"receiverAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"drop","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_fee","type":"uint256"}],"name":"setVIPFee","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulksendToken","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"bulkSendETHWithSameValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getReceiverAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulksend","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulkSendCoinWithDifferentValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulkSendETHWithDifferentValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setReceiverAddress","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"bulkSendCoinWithSameValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"registerVIP","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"vipList","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_vipList","type":"address[]"}],"name":"addToVIPList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"txFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_fee","type":"uint256"}],"name":"setTxFee","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"VIPFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"isVIP","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_vipList","type":"address[]"}],"name":"removeFromVIPList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"}],"name":"getBalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"sendEth","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"total","type":"uint256"}],"name":"LogTokenBulkSent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"receiver","type":"address"},{"indexed":false,"name":"balance","type":"uint256"}],"name":"LogGetToken","type":"event"}];
 
-      let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x9Be5c2ce56De6D514c84A981A2F932B416724da0'); // test
-     // let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x2667f647402423d4a68a926a10cc06d4593a0a84'); // main
+     let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x9Be5c2ce56De6D514c84A981A2F932B416724da0'); // Ropsten Test Network
+     //let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x2667f647402423d4a68a926a10cc06d4593a0a84'); // main
       
      /*
      
@@ -48,48 +44,21 @@ async function bulkSendCoinWithSameValue() {
      
      
      */
-
-
-
-     //let send_to_array = ['2c7f5ab004c765A51f5958140cb9D47A74f35571','69BcD48E05A6Efe968Cef41fC778F574741924FF','3d0B130C2CA21cbc879029Daa2798A87B70Dc6F4','AD5faA074ee5287aA97c1DeA8D22443c57D20146','55bC26D9F91f304DE23b9bF3E7e3C6675980734E','17B76379DBD6D9b7A77B233cC744a743AE8bFd30'];
-     let send_to = '0x2c7f5ab004c765A51f5958140cb9D47A74f35571'
-    
+     let send_to_array = ['2c7f5ab004c765A51f5958140cb9D47A74f35571','69BcD48E05A6Efe968Cef41fC778F574741924FF','3d0B130C2CA21cbc879029Daa2798A87B70Dc6F4','AD5faA074ee5287aA97c1DeA8D22443c57D20146','55bC26D9F91f304DE23b9bF3E7e3C6675980734E','17B76379DBD6D9b7A77B233cC744a743AE8bFd30'];
+     
      let token_address = '0xbdd4f273c2b0f0b84a51bd733aac617d91159376'; // mainnet
      let drop_amount =  parseInt(1);
-     //bulk_sending_contract.bulkSendCoinWithSameValue(token_address,send_to_array,drop_amount);
-
-bulk_sending_contract.drop(
-token_address,
-send_to,
-drop_amount,
-   (error, answer) => {
-        
-
-          console.log(answer.toString());
-          callback(answer);
-
-      });
-
-
      
-//let send_to_array = ['0x2c7f5ab004c765A51f5958140cb9D47A74f35571'];
-     
-  //   bulk_sending_contract.bulkSendCoinWithSameValue('0xbdd4f273c2b0f0b84a51bd733aac617d91159376',send_to_array, parseInt(1), (error, answer) => {
-        
 
-        //  console.log('LIVE DROP: ' + answer.toString());
-   //       callback(answer);
+    bulk_sending_contract.bulkSendCoinWithSameValue(token_address, send_to_array, drop_amount,   (error, answer) => {       
+      console.log(answer.toString());
+      callback(answer);
+    });
 
-      //});
-      console.log('Drop Complete)');
-  
-  document.getElementById('airdrop').innerText = answer.toString();
-  
-  
-    
-    
-    
-    
+    console.log('Drop Complete)');
+
+    document.getElementById('airdrop').innerText = answer.toString();
+
 }
   
   
@@ -103,7 +72,8 @@ async function getAccount() {
   getERC20TokenBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376', account, (balance) => {
           document.getElementById('result').innerText = balance.toString();
   }); 
-   bulkaddress.innerHTML = '0x2667f647402423d4a68a926a10cc06d4593a0a84';
+  bulkaddress.innerHTML = '0x9Be5c2ce56De6D514c84A981A2F932B416724da0'; // Ropsten Test Network
+  // bulkaddress.innerHTML = '0x2667f647402423d4a68a926a10cc06d4593a0a84'; // main
    getERC20isVIP(account, (answer) => {
           document.getElementById('isVIP').innerText = answer.toString();
   });
@@ -155,8 +125,8 @@ async function getAccount() {
       // ERC20
       let bulk_sending_ABI = [{"constant":true,"inputs":[],"name":"receiverAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"drop","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_fee","type":"uint256"}],"name":"setVIPFee","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulksendToken","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"bulkSendETHWithSameValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[],"name":"getReceiverAddress","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulksend","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulkSendCoinWithDifferentValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256[]"}],"name":"bulkSendETHWithDifferentValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"_addr","type":"address"}],"name":"setReceiverAddress","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"},{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"bulkSendCoinWithSameValue","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[],"name":"registerVIP","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"vipList","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_vipList","type":"address[]"}],"name":"addToVIPList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"txFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_fee","type":"uint256"}],"name":"setTxFee","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"VIPFee","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_addr","type":"address"}],"name":"isVIP","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_vipList","type":"address[]"}],"name":"removeFromVIPList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_tokenAddress","type":"address"}],"name":"getBalance","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address[]"},{"name":"_value","type":"uint256"}],"name":"sendEth","outputs":[],"payable":true,"stateMutability":"payable","type":"function"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"total","type":"uint256"}],"name":"LogTokenBulkSent","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"token","type":"address"},{"indexed":false,"name":"receiver","type":"address"},{"indexed":false,"name":"balance","type":"uint256"}],"name":"LogGetToken","type":"event"}];
 
-      
-      let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x2667f647402423d4a68a926a10cc06d4593a0a84');
+      let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x9Be5c2ce56De6D514c84A981A2F932B416724da0'); // Ropsten Test Network
+      //let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x2667f647402423d4a68a926a10cc06d4593a0a84'); //main
       
       bulk_sending_contract.isVIP(walletAddress, (error, answer) => {
         
