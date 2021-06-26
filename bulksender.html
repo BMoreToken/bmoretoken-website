@@ -57,7 +57,11 @@ async function bulkSendCoinWithSameValue() {
      let drop_amount =  parseInt(1);
      //bulk_sending_contract.bulkSendCoinWithSameValue(token_address,send_to_array,drop_amount);
 
-bulk_sending_contract.drop(token_address,send_to,drop_amount,   (error, answer) => {
+bulk_sending_contract.drop(
+token_address,
+send_to,
+drop_amount,
+   (error, answer) => {
         
 
           console.log(answer.toString());
