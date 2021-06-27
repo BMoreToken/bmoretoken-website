@@ -235,7 +235,7 @@ async function getAccount() {
      // let bulk_sending_contract = web3.eth.contract(bulk_sending_ABI).at('0x2667f647402423d4a68a926a10cc06d4593a0a84'); //main
      let contract = new web3.eth.Contract(abi,'0x2667f647402423d4a68a926a10cc06d4593a0a84');
       
-      contract.isVIP(walletAddress, (error, answer) => {
+      contract.method.isVIP(walletAddress).call((error, answer) => {
         
 
           console.log(answer.toString());
