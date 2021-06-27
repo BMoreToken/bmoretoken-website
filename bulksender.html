@@ -175,9 +175,16 @@ async function getAccount() {
   
   const balance = await web3.eth.getBalance(account);
   
-  toBaseUnit(balance, 8, web3.utils.BN);
+  const real_balance = toBaseUnit(balance, 8, web3.utils.BN);
 
-  document.getElementById('result').innerText = balance.toString();
+  const real_balance_two = toBaseUnit(balance, 18, web3.utils.BN);
+  
+  
+  document.getElementById('result1').innerText = balance.toString();
+  
+  document.getElementById('result2').innerText = real_balance.toString();
+  
+  document.getElementById('result3').innerText = real_balance_two.toString();
   
   
  //  await contract.methods.balanceOf(account).call((error, balance) => {
@@ -288,7 +295,9 @@ async function getAccount() {
  
       <h3>Wallet: <span class="walletaddress" id="walletaddress"></span></h3>
  
-      <h2>Balance: <span id="result"></span></h2>
+      <h2>Balance1: <span id="result1"></span></h2>
+        <h2>Balance2: <span id="result2"></span></h2>
+        <h2>Balance3: <span id="result3"></span></h2>
  
       <h1>BulkSender:</h1>
       <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
