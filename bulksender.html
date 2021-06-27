@@ -175,28 +175,28 @@ async function getAccount() {
   
   const balance = await web3.eth.getBalance(account);
   
-  const real_balance = toBaseUnit(balance, 8, web3.utils.BN);
+ // const real_balance = balance.div(10**decimals);
 
   const real_balance_two = toBaseUnit(balance, 18, web3.utils.BN);
   
   
   document.getElementById('result1').innerText = balance.toString();
   
-  document.getElementById('result2').innerText = real_balance.toString();
+  //document.getElementById('result2').innerText = real_balance.toString();
   
-  document.getElementById('result3').innerText = real_balance_two.toString();
+  //document.getElementById('result3').innerText = real_balance_two.toString();
   
   
  //  await contract.methods.balanceOf(account).call((error, balance) => {
      // contract.balanceOf(walletAddress, (error, balance) => {
         
-       /// contract.methods.decimals().call((error, decimals) => {
+        contract.methods.decimals().call((error, decimals) => {
          
-        //  balance = balance.div(10**decimals);
-   //       console.log(balance.toString());
-     //     document.getElementById('result').innerText = balance.toString();
-       //   callback(balance);
-       // });
+         balance = balance.div(10**decimals);
+          console.log(balance.toString());
+          document.getElementById('result2').innerText = balance.toString();
+          callback(balance);
+        });
      // });
   
   
