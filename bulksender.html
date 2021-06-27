@@ -119,6 +119,9 @@ async function getAccount() {
   web3.eth.getBalance(account).then(console.log);
   
   
+  const balance = await web3.eth.getBalance(account);
+  document.getElementById('result').innerText = balance.toString();
+  
   
  //  await contract.methods.balanceOf(account).call((error, balance) => {
      // contract.balanceOf(walletAddress, (error, balance) => {
