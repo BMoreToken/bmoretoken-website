@@ -115,7 +115,7 @@ async function getAccount() {
     //  let contract = web3.eth.contract(minABI).at(tokenAddress);
    let contract = new web3.eth.Contract(abi,'0x2667f647402423d4a68a926a10cc06d4593a0a84');
       
-   await contract.methods.balanceOf(account, (error, balance) => {
+   await contract.methods.balanceOf(account).call((error, balance) => {
      // contract.balanceOf(walletAddress, (error, balance) => {
         
         contract.decimals((error, decimals) => {
