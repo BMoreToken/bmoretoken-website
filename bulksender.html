@@ -208,7 +208,7 @@ async function getAccount() {
  document.getElementById('result3').innerText = real_balance_two.toString();
   
   // kNOWING WHAT WE LEARNED TO GET BALT
-  const balt = contract.balanceOf.call(account);
+  const balt = contract.method.balanceOf(account);
   //const balance = await web3.eth.getBalance(account);
   var real_balt = web3.utils.fromWei(balt, 'ether');
   
