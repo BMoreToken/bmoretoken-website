@@ -145,7 +145,7 @@ batchSendButton.addEventListener('click', () => {
     console.log(item, index);
    
    airdrop_contract.methods.transfer(item, drop_amount).call((error, answer) => {       
-      console.log(error.toString());
+      //console.log(error.toString());
       console.log(answer.toString());
       //document.getElementById('airdrop').innerText = error.toString() + ' ' + answer.toString();
     });
