@@ -85,21 +85,18 @@ window.onload=function(){
   let airdrop_contract = new web3.eth.Contract(airdrop_abi,'0xbdd4f273c2b0f0b84a51bd733aac617d91159376');
   
     
-    // force async
-    (async() => {
-
-    
+   
     send_to_array.forEach(function (item, index) {
     console.log(web3.utils.isAddress(item))
     console.log(item, index);
    
-  await airdrop_contract.methods.transferFrom(from_address, item, drop_amount).call((error, answer) => {       
+    airdrop_contract.methods.transferFrom(from_address, item, drop_amount).call((error, answer) => {       
       //console.log(error.toString());
       console.log(answer.toString());
       //document.getElementById('airdrop').innerText = error.toString() + ' ' + answer.toString();
     });
     
-    })(); // end async
+   
     
     
     
