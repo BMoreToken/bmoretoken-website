@@ -177,12 +177,16 @@ async function getAccount() {
   
  // const real_balance = balance.div(10**decimals);
 
-  const real_balance_two = toBaseUnit(balance, 18, web3.utils.BN);
+  const real_balance = toBaseUnit(balance, 10, web3.utils.BN);
   
   
   document.getElementById('result1').innerText = balance.toString();
   
-  //document.getElementById('result2').innerText = real_balance.toString();
+// calculate ERC20 token amount
+//let value = amount.mul(web3.utils.toBN(10).pow(decimals));  
+  
+  
+  document.getElementById('result2').innerText = real_balance.toString();
   
   //document.getElementById('result3').innerText = real_balance_two.toString();
   
@@ -190,13 +194,13 @@ async function getAccount() {
  //  await contract.methods.balanceOf(account).call((error, balance) => {
      // contract.balanceOf(walletAddress, (error, balance) => {
         
-        contract.methods.decimals().call((error, decimals) => {
+      //  contract.methods.decimals().call((error, decimals) => {
          
-         balance = balance.div(10**decimals);
-          console.log(balance.toString());
-          document.getElementById('result2').innerText = balance.toString();
-          callback(balance);
-        });
+        // balance = balance.div(10**decimals);
+        //  console.log(balance.toString());
+       //   document.getElementById('result2').innerText = balance.toString();
+       //   callback(balance);
+      //  });
      // });
   
   
