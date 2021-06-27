@@ -171,6 +171,8 @@ async function getAccount() {
    let contract = new web3.eth.Contract(abi,'0x2667f647402423d4a68a926a10cc06d4593a0a84');
       
   
+  
+  // OK this is ETH not Balt
   web3.eth.getBalance(account).then(console.log);
   
   const balance = await web3.eth.getBalance(account);
@@ -192,15 +194,27 @@ async function getAccount() {
         
   //const real_balance_two = balance / 10 ** 18;
   
-  document.getElementById('result1').innerText = balance.toString();
+  
+  
+  
+//  document.getElementById('result1').innerText = balance.toString();
   
 // calculate ERC20 token amount
 //let value = amount.mul(web3.utils.toBN(10).pow(decimals));  
   
   
- document.getElementById('result2').innerText = real_balance.toString();
+// document.getElementById('result2').innerText = real_balance.toString();
   
-  document.getElementById('result3').innerText = real_balance_two.toString();
+ document.getElementById('result3').innerText = real_balance_two.toString();
+  
+  // kNOWING WHAT WE LEARNED TO GET BALT
+  const balt = contract.balanceOf.call(account);
+  //const balance = await web3.eth.getBalance(account);
+  var real_balt = web3.utils.fromWei(balt, 'ether');
+  
+  
+   document.getElementById('result1').innerText = balt.toString();
+   document.getElementById('result2').innerText = real_balt.toString();
   
   
  //  await contract.methods.balanceOf(account).call((error, balance) => {
@@ -313,7 +327,7 @@ async function getAccount() {
  
       <h2>Balance1: <span id="result1"></span></h2>
         <h2>Balance2: <span id="result2"></span></h2>
-        <h2>Balance3: <span id="result3"></span></h2>
+        <h2>ETH: <span id="result3"></span></h2>
  
       <h1>BulkSender:</h1>
       <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
