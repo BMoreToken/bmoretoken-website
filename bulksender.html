@@ -225,7 +225,7 @@ async function getAccount() {
       let token_answer = token_contract.methods.balanceOf(account).call((error, answer) => {
           document.getElementById('result1').innerText = answer.toString();
           console.log(answer.toString());
-          callback(answer);
+          //callback(answer);
       });
   
 //  token_contract.balanceOf(account).call((error, answer) => {
