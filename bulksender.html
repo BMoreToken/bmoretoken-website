@@ -185,8 +185,7 @@ async function getAccount() {
      
      
      
-    // end window onLoad Function 
-   }   
+
      
      
      
@@ -194,7 +193,7 @@ function isString(s) {
   return (typeof s === 'string' || s instanceof String)
 }
 
-export function toBaseUnit(value, decimals, BN) {
+function toBaseUnit(value, decimals, BN) {
   if (!isString(value)) {
     throw new Error('Pass strings to prevent floating point precision issues.')
   }
@@ -243,7 +242,8 @@ export function toBaseUnit(value, decimals, BN) {
      
      
      
-     
+    // end window onLoad Function 
+   }        
      
      
      
