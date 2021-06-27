@@ -118,7 +118,7 @@ async function getAccount() {
    await contract.methods.balanceOf(account).call((error, balance) => {
      // contract.balanceOf(walletAddress, (error, balance) => {
         
-        contract.decimals((error, decimals) => {
+        contract.methods.decimals().call((error, decimals) => {
          
           balance = balance.div(10**decimals);
           console.log(balance.toString());
