@@ -177,8 +177,8 @@ async function getAccount() {
   
  // const real_balance = balance.div(10**decimals);
 
-  const real_balance = toBaseUnit(balance, 10, web3.utils.BN);
-  
+  //const real_balance = toBaseUnit(balance, 10, web3.utils.BN);
+  const real_balance = balance / 10 ** 8;
   
   document.getElementById('result1').innerText = balance.toString();
   
