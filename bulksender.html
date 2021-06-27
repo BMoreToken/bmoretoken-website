@@ -87,24 +87,11 @@ async function getAccount() {
   //showAccount.innerHTML = account;
   walletaddress.innerHTML = account;
   tokenaddress.innerHTML = '0xbdd4f273c2b0f0b84a51bd733aac617d91159376';
-  getERC20TokenBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376', account, (balance) => {
-          document.getElementById('result').innerText = balance.toString();
-  }); 
-  //bulkaddress.innerHTML = '0x516FBF1A67C83a026B2cb7AceCE272196604d0b7'; // Ropsten Test Network
-   bulkaddress.innerHTML = '0x2667f647402423d4a68a926a10cc06d4593a0a84'; // main
-   getERC20isVIP(account, (answer) => {
-          document.getElementById('isVIP').innerText = answer.toString();
-  });
-} 
   
   
-}
   
   
-
- function getERC20TokenBalance(tokenAddress, walletAddress, callback) {
-
-      // ERC20
+  // ERC20
       let abi = [
         // balanceOf
         {
@@ -135,10 +122,37 @@ async function getAccount() {
          
           balance = balance.div(10**decimals);
           console.log(balance.toString());
+          document.getElementById('result').innerText = balance.toString();
           callback(balance);
         });
       });
-    }
+  
+  
+  
+  
+  
+  //getERC20TokenBalance('0xbdd4f273c2b0f0b84a51bd733aac617d91159376', account, (balance) => {
+  //        document.getElementById('result').innerText = balance.toString();
+ // }); 
+  
+  
+  
+  //bulkaddress.innerHTML = '0x516FBF1A67C83a026B2cb7AceCE272196604d0b7'; // Ropsten Test Network
+   bulkaddress.innerHTML = '0x2667f647402423d4a68a926a10cc06d4593a0a84'; // main
+   getERC20isVIP(account, (answer) => {
+          document.getElementById('isVIP').innerText = answer.toString();
+  });
+} 
+  
+  
+}
+  
+  
+
+// function getERC20TokenBalance(tokenAddress, walletAddress, callback) {
+
+      
+//    }
   
    function getERC20isVIP(walletAddress, callback) {
       console.log('getERC20isVIP(' + walletAddress.toString() + ')');
