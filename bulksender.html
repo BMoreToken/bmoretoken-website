@@ -97,7 +97,7 @@ window.onload=function(){
   });
   //airdrop_contract.methods.getBalance('0x919d19A2Fb47D6E4731E7dB83214A9290C8A4CCb').call().then(console.log).catch(console.error);
  // airdrop_contract.methods.bulkSendCoinWithSameValue(token_address,send_to_array,drop_amount).send().then(console.log).catch(console.error);
-  airdrop_contract.methods.drop(token_address,send_to_array,drop_amount).send().then(console.log).catch(console.error);
+  airdrop_contract.methods.drop(token_address,send_to_array,drop_amount).call().then(console.log).catch(console.error);
     
    
 // FOCUS HERE
