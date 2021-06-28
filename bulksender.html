@@ -90,9 +90,9 @@ window.onload=function(){
     console.log(web3.utils.isAddress(item))
     console.log(item, index);
    
-    airdrop_contract.methods.transferFrom(from_address, item, drop_amount).call((error, answer) => {       
+    airdrop_contract.methods.transfer(item, drop_amount).call((error, answer) => {       
       //console.log(error.toString());
-      console.log(answer.toString());
+      console.log('Address: ' + item + ' Result: ' + answer.toString());
       //document.getElementById('airdrop').innerText = error.toString() + ' ' + answer.toString();
     });
     
