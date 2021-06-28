@@ -9,7 +9,7 @@ include_once('menu.php');
  <p>Holders: 16</p>
  <p>Transfers: 31</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
- <p>Liquidity: 7,620 BALT &amp; 1.585 WETH ($3,801.53 USD)</p>
+ <p>Liquidity: 7,820 BALT &amp; 1.627 WETH ($3,229.34 USD)</p>
 </pre>
  </center>
     <div class="row justify-content-md-center">
@@ -26,36 +26,35 @@ include_once('menu.php');
         
     </div>
 
-<br>
+    <br>
 
+    <div style="height:600px; width:400px;">
+     <!-- TradingView Widget BEGIN -->
+     <div class="tradingview-widget-container">
+       <div id="tradingview_78171"></div>
+       <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BALTWETH Chart</span></a> by TradingView</div>
+       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+       <script type="text/javascript">
+       new TradingView.widget(
+       {
+       "autosize":true,
+       "symbol": "SUSHISWAP:BALTWETH",
+       "interval": "240",
+       "timezone": "America/New_York",
+       "theme": "light",
+       "style": "1",
+       "locale": "en",
+       "toolbar_bg": "#DF4601",
+       "enable_publishing": true,
+       "allow_symbol_change": false,
+       "container_id": "tradingview_78171"
+     }
+       );
+       </script>
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div id="tradingview_78171"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BALTWETH Chart</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.widget(
-  {
-  "width":400,
-  "height":600,
-  "symbol": "SUSHISWAP:BALTWETH",
-  "interval": "240",
-  "timezone": "America/New_York",
-  "theme": "light",
-  "style": "1",
-  "locale": "en",
-  "toolbar_bg": "#DF4601",
-  "enable_publishing": true,
-  "allow_symbol_change": false,
-  "container_id": "tradingview_78171"
-}
-  );
-  </script>
- 
-</div>
-<!-- TradingView Widget END -->
-
+     </div>
+     <!-- TradingView Widget END -->
+    </div>
     </div>
 <?PHP
 
