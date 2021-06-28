@@ -13,7 +13,7 @@ include_once("menu.php");
         </div>
       </form> 
       <hr>
-      <h3>Addresses in Next Drop on 6/25/2021</h3>
+      <h3>Addresses in Next Drop on 7/22/2021</h3>
       <div id="success"></div>
       <div id="error"></div>
       <script>
@@ -25,7 +25,5 @@ include_once("menu.php");
       });
       </script>
       <h3>Prior Drops {For 1 BMoreToken (BALT)}</h3>
-      <li><a href='https://etherscan.io/tx/0x992322c9d302c3c851b89a3ba6ad75f3c2eaf07de3022bd86b7cb1976f32bb45'>https://etherscan.io/tx/0x992322c9d302c3c851b89a3ba6ad75f3c2eaf07de3022bd86b7cb1976f32bb45</a></li>
-      <?PHP
-include_once("footer.php");
-?>
+      <li><a href='https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>Drop History</a></li>
+<?PHP include_once("footer.php"); ?>
