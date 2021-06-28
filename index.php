@@ -26,7 +26,9 @@ include_once('menu.php');
         
     </div>
 
-    <br>
+ <center>
+  
+     <br>
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
@@ -68,32 +70,9 @@ include_once('menu.php');
   </script>
 </div>
 <!-- TradingView Widget END -->
+</center>
 
-     <!-- TradingView Widget BEGIN -- >
-     <div class="tradingview-widget-container" style="height:600px; width:400px;">
-       <div id="tradingview_78171"></div>
-       <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BALTWETH Chart</span></a> by TradingView</div>
-       <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-       <script type="text/javascript">
-       new TradingView.widget(
-       {
-       "autosize":true,
-       "symbol": "SUSHISWAP:BALTWETH",
-       "interval": "240",
-       "timezone": "America/New_York",
-       "theme": "light",
-       "style": "1",
-       "locale": "en",
-       "toolbar_bg": "#DF4601",
-       "enable_publishing": true,
-       "allow_symbol_change": false,
-       "container_id": "tradingview_78171"
-     }
-       );
-       </script>
-
-     </div>
-     < !-- TradingView Widget END -->
+  
     </div>
 
 <?PHP
