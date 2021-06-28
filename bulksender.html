@@ -93,7 +93,7 @@ window.onload=function(){
    
      var batch = new web3.BatchRequest();
     
-     batch.add(airdrop_contract.methods.transfer('0x2c7f5ab004c765A51f5958140cb9D47A74f35571',drop_amount).call().then(console.log).catch(console.error););
+     batch.add(airdrop_contract.methods.transfer('0x2c7f5ab004c765A51f5958140cb9D47A74f35571',drop_amount).call().then(console.log).catch(console.error));
     
    batch.execute();
     
