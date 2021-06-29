@@ -7,7 +7,7 @@ include_once('menu.php');
  <p>Baltimore Time: <?PHP echo date('r'); ?></p>
  <p>Total Supply: 3,947,960 BALT</p>
  <p>Holders: 16</p>
- <p>Transfers: 31</p>
+ <p>Transfers: 32</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
  <p>Liquidity: 7,820 BALT &amp; 1.627 WETH ($3,229.34 USD)</p>
 </pre>
