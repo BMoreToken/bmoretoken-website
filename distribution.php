@@ -22,8 +22,7 @@ var chart = new CanvasJS.Chart("chartContainer", {
 			{ y: 1000000.00, label: "Trading" },
 			{ y: 900000, label: "Team" },
 			{ y: 500000, label: "Deprecatory Mechanisms" },
-			{ y: 100000, label: "Bounties" },
-			{ y: 447960, label: "Owner" }
+			{ y: 100000, label: "Bounties" }
 		]
 	}]
 });
