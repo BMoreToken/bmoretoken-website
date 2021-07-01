@@ -12,7 +12,7 @@
     <td style="width:50%" valign="middle" align="left"><h3>Patrick McGuire<br>Technology and Business Relations</h3><a target="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/baltimorehacker'>LinkedIn</a></td>
    </tr>
    <tr>
-    <td style="width:50%" valign="middle" align="right"><h3>John Runner II<br>Media Relations</h3><a target="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>LinkedIn</a></td>
+    <td style="width:50%" valign="middle" align="right"><h3>John Runner II<br>Social Media</h3><a target="_Blank" type="button" class="btn btn-info btn-lg btn-block" href='https://www.linkedin.com/in/jt-runner-ii-29bb65131'>LinkedIn</a></td>
     <td style="width:50%" valign="top" align="left"><img src="1528373984428.jpg"></td>
    </tr>
    <tr>
