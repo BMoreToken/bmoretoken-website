@@ -36,6 +36,11 @@ var html_pickup = Object.create(null);
 fs.readFile("pickup.html", "utf-8", function(error, data) {
   html_pickup = data.toString();
 });
+// Block Explorer
+var html_explorer = Object.create(null);
+fs.readFile("explorer.html", "utf-8", function(error, data) {
+  html_explorer = data.toString();
+});
 // Routing 
 app.all('/', function (req, res) {
   res.send( html_header + html_tools + html_footer );
@@ -51,6 +56,9 @@ app.all('/events', function (req, res) {
 });
 app.all('/pickup', function (req, res) {
   res.send(html_header + html_pickup + html_footer);
+});
+app.all('/explorer', function (req, res) {
+  res.send(html_header + html_explorer + html_footer);
 });
 // Start Server
 app.listen(3000, function () {
