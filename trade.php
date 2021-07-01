@@ -14,13 +14,16 @@ include_once('menu.php');
       </div>
       
       <div class="col-md-auto">
-        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://app.sushi.com/swap?inputCurrency=0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>Trade at SushiSwap</a>
+        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://app.sushi.com/swap?inputCurrency=0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>Trade ETH at SushiSwap</a>
       </div>
    
      <div class="col-md-auto">
-        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://matcha.xyz/markets/1/0xbdd4f273c2b0f0b84a51bd733aac617d91159376/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'>Trade at Matcha by 0x</a>
+        <a target='_Blank' type="button" class="btn btn-primary btn-lg btn-block" href='https://matcha.xyz/markets/1/0xbdd4f273c2b0f0b84a51bd733aac617d91159376/0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee'>Trade ETH at Matcha by 0x</a>
       </div>
      
+     <div class="col-md-auto">
+        <a target='_Blank' type="button" class="btn btn-primary btn-lg btn-block" href='https://matcha.xyz/markets/1/0xbdd4f273c2b0f0b84a51bd733aac617d91159376/0xdac17f958d2ee523a2206206994597c13d831ec7'>Trade USDT at Matcha by 0x</a>
+      </div>
      
     </div>
 
