@@ -5,7 +5,21 @@ include_once('menu.php');
 
 <div class="container">
  
-<center>    
+<center>  
+ 
+   <div class="row justify-content-md-center">
+    <h3>Buy With:</h3>
+      <div class="col-md-auto">
+        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0xbDd4f273C2b0f0B84a51BD733AAc617D91159376'>ETH</a>
+      </div>
+ 
+    <div class="col-md-auto">
+        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://app.sushi.com/swap?inputCurrency=0xdAC17F958D2ee523a2206206994597C13D831ec7&outputCurrency=0xbDd4f273C2b0f0B84a51BD733AAc617D91159376'>USDT</a>
+      </div>
+    
+ </div>
+ 
+ 
   <br> <br>
     <div class="row justify-content-md-center">
       
