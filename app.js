@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
   })
   fs.createReadStream('footer.html').pipe(res)
 })
-
+server.listen(process.env.PORT || 3000)
 /*
 app.get(/metamask/, function (req, res) {  
   const http = require('http')
