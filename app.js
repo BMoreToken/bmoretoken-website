@@ -13,20 +13,32 @@ fs.readFile("footer.html", "utf-8", function(error, data) {
 });
 // Routing 
 app.all('/', function (req, res) {
-  //let html = fs.createReadStream('metamask.html')
-  res.send( html_header + 'Hello Home!' + html_footer );
+  var html_main = Object.create(null);
+  fs.readFile("tools.html", "utf-8", function(error, data) {
+    html_main = data.toString();
+  });
+  res.send( html_header + html_main + html_footer );
 });
 app.all('/metamask', function (req, res) {
-  //let html = fs.createReadStream('metamask.html')
-  res.send(html_header + 'Hello MetaMask!' + html_footer);
+  var html_main = Object.create(null);
+  fs.readFile("metamask.html", "utf-8", function(error, data) {
+    html_main = data.toString();
+  });
+  res.send(html_header + html_main + html_footer);
 });
 app.all('/bulksender', function (req, res) {
-  //let html = fs.createReadStream('metamask.html')
-  res.send(html_header + 'Hello BulkSender!' + html_footer);
+  var html_main = Object.create(null);
+  fs.readFile("bulksender.html", "utf-8", function(error, data) {
+    html_main = data.toString();
+  });
+  res.send(html_header + html_main + html_footer);
 });
 app.all('/events', function (req, res) {
-  //let html = fs.createReadStream('metamask.html')
-  res.send(html_header + 'Hello Events!' + html_footer);
+  var html_main = Object.create(null);
+  fs.readFile("calendar.html", "utf-8", function(error, data) {
+    html_main = data.toString();
+  });
+  res.send(html_header + html_main + html_footer);
 });
 // Start Server
 app.listen(3000, function () {
