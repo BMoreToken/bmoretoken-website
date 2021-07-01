@@ -5,13 +5,13 @@ const fs = require('fs')
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('header.html').pipe(res)
-  app.get(/metamask/, function (req, res) {  
+  app.get(/metamask/, function (fs, req, res) {  
     fs.createReadStream('metamask.html').pipe(res)
   })
-  app.get(/bulksender/, function (req, res) {
+  app.get(/bulksender/, function (fs, req, res) {
     fs.createReadStream('bulksender.html').pipe(res)
   })
-  app.get(/events/, function (req, res) {
+  app.get(/events/, function (fs, req, res) {
     fs.createReadStream('calendar.html').pipe(res)
   })
   fs.createReadStream('footer.html').pipe(res)
