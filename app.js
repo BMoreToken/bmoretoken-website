@@ -5,13 +5,13 @@ const server = http.createServer((req, res) => {
   fs.createReadStream('header.html').pipe(res)
   var express = require('express')
   var app = express()
-  app.get('/metamask', function (req, res) {
+  app.get('/tools/metamask', function (req, res) {
     fs.createReadStream('metamask.html').pipe(res)
   })
-  app.get('/bulksender', function (req, res) {
+  app.get('/tools/bulksender', function (req, res) {
     fs.createReadStream('bulksender.html').pipe(res)
   })
-  app.get('/events', function (req, res) {
+  app.get('/tools/events', function (req, res) {
     fs.createReadStream('calendar.html').pipe(res)
   })
   fs.createReadStream('footer.html').pipe(res)
