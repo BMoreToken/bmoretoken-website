@@ -9,7 +9,7 @@ let map, infoWindow;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 39.3133028, lng: -76.7271061 },
-    zoom: 6,
+    zoom: 12,
   });
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
@@ -55,13 +55,13 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
 #map {
-  height: 100%;
+  height: 50%;
 }
 
 /* Optional: Makes the sample page fill the window. */
 html,
 body {
-  height: 100%;
+  height: 50%;
   margin: 0;
   padding: 0;
 }
@@ -85,13 +85,11 @@ body {
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Geolocation</title>
+    <title>BMoreToken Events</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <!-- jsFiddle will insert css and js -->
   </head>
   <body>
     <div id="map"></div>
-
     <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmWl1n9qpixss32yubmTXqKPXvMVPE7I8&callback=initMap&libraries=&v=weekly"
