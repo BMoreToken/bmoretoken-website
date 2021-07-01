@@ -1,15 +1,19 @@
 const fs = require('fs')
 var express = require('express');
 var app = express();
-app.all('/tools/metamask', function (req, res) {
+app.all('/', function (req, res) {
+  //let html = fs.createReadStream('metamask.html')
+  res.send('Hello Home!');
+});
+app.all('/metamask', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
   res.send('Hello MetaMask!');
 });
-app.all('/tools/bulksender', function (req, res) {
+app.all('/bulksender', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
   res.send('Hello BulkSender!');
 });
-app.all('/tools/events', function (req, res) {
+app.all('/events', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
   res.send('Hello Events!');
 });
