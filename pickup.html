@@ -12,14 +12,14 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
 
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-  console.log('Checking Distance to Event:');
+  document.write('Your current position is:');
+  document.write(`Latitude : ${crd.latitude}`);
+  document.write(`Longitude: ${crd.longitude}`);
+  document.write(`More or less ${crd.accuracy} meters.`);
+  document.write('Checking Distance to Event:');
   
   // alert distance to event
-  alert('Distance to Event: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1). ' km');
+  document.write('Distance to Event: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km');
   
   
   
