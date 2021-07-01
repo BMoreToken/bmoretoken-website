@@ -7,9 +7,9 @@ let html_footer = fs.createReadStream('footer.html')
 
 app.all('/', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  res.send(html_header);
+  html_header.pipe(res);
   res.send('Hello Home!');
-  res.send(html_footer);
+  html_footer.pipe(res)
 });
 app.all('/metamask', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
@@ -33,96 +33,3 @@ app.listen(3000, function () {
 
 
 
-
-/*
-var express = require('express')
-var app = express()
-const http = require('http')
-const fs = require('fs')
-
-var metamask = function (req, res, next) {
-  fs.createReadStream('metamask.html').pipe(res)
-  next()
-}
-
-
-const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('header.html').pipe(res)
-  
-  fs.createReadStream('footer.html').pipe(res)
-})
-server.listen(process.env.PORT || 3000)
-
-*/
-
-
-
-
-
-/*
-
-const server = http.createServer((req, res, next) => {
-  res.writeHead(200, { 'content-type': 'text/html' })
-  fs.createReadStream('header.html').pipe(res)
-  //print('1').pipe(res)
-  app.get(/metamask/, function (req, res) {  
-    //print('2').pipe(res)
-    //res.send(fs.createReadStream('calendar.html'))
-    //fs.createReadStream('metamask.html').pipe(res)
-  })
- // res.send('2')
-  app.get(/bulksender/, function (req, res) {
-   // res.send('hello bulksender')
-    //res.send(fs.createReadStream('calendar.html'))
-    //fs.createReadStream('bulksender.html').pipe(res)
-  })
- // res.send('3')
-  app.get(/events/, function (req, res) {
-    //res.send('hello events')
-    //res.send(fs.createReadStream('calendar.html'))
-    //fs.createReadStream('calendar.html').pipe(res)
-  })
- // res.send('4')
-  fs.createReadStream('footer.html').pipe(res)
-})
-server.listen(process.env.PORT || 3000)
-*/
-
-
-
-/*
-app.get(/metamask/, function (req, res) {  
-  const http = require('http')
-  const fs = require('fs')
-  const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
-    fs.createReadStream('header.html').pipe(res)
-    fs.createReadStream('metamask.html').pipe(res)
-    fs.createReadStream('footer.html').pipe(res)
-  })
-  server.listen(process.env.PORT || 3000)
-}
-app.get(/bulksender/, function (req, res) {  
-  const http = require('http')
-  const fs = require('fs')
-  const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
-    fs.createReadStream('header.html').pipe(res)
-    fs.createReadStream('bulksender.html').pipe(res)
-    fs.createReadStream('footer.html').pipe(res)
-  })
-  server.listen(process.env.PORT || 3000)
-}
-app.get(/events/, function (req, res) {  
-  const http = require('http')
-  const fs = require('fs')
-  const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'content-type': 'text/html' })
-    fs.createReadStream('header.html').pipe(res)
-    fs.createReadStream('calendar.html').pipe(res)
-    fs.createReadStream('footer.html').pipe(res)
-  })
-  server.listen(process.env.PORT || 3000)
-}
-*/
