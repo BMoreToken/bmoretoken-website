@@ -1,19 +1,20 @@
 var express = require('express')
 var app = express()
-
+const http = require('http')
+const fs = require('fs')
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('header.html').pipe(res)
   app.get(/metamask/, function (req, res) {  
-    //res.send(fs.createReadStream('calendar.html'))
+    res.send(fs.createReadStream('calendar.html'))
     //fs.createReadStream('metamask.html').pipe(res)
   })
   app.get(/bulksender/, function (req, res) {
-    //res.send(fs.createReadStream('calendar.html'))
+    res.send(fs.createReadStream('calendar.html'))
     //fs.createReadStream('bulksender.html').pipe(res)
   })
   app.get(/events/, function (req, res) {
-    //res.send(fs.createReadStream('calendar.html'))
+    res.send(fs.createReadStream('calendar.html'))
     //fs.createReadStream('calendar.html').pipe(res)
   })
   fs.createReadStream('footer.html').pipe(res)
