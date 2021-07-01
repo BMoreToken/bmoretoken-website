@@ -7,19 +7,19 @@ let html_footer = fs.createReadStream('footer.html')
 
 app.all('/', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  res.send('Hello Home!');
+  res.send(html_header + 'Hello Home!' + html_footer);
 });
 app.all('/metamask', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  res.send('Hello MetaMask!');
+  res.send(html_header + 'Hello MetaMask!' + html_footer);
 });
 app.all('/bulksender', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  res.send('Hello BulkSender!');
+  res.send(html_header + 'Hello BulkSender!' + html_footer);
 });
 app.all('/events', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  res.send('Hello Events!');
+  res.send(html_header + 'Hello Events!' + html_footer);
 });
 
 
