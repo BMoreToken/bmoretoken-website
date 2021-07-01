@@ -5,9 +5,9 @@ const fs = require('fs')
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('header.html').pipe(res)
-  print('1').pipe(res)
+  //print('1').pipe(res)
   app.get(/metamask/, function (req, res) {  
-    print('2').pipe(res)
+    //print('2').pipe(res)
     //res.send(fs.createReadStream('calendar.html'))
     //fs.createReadStream('metamask.html').pipe(res)
   })
