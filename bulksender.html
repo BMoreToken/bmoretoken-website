@@ -1,15 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
 <script>
   
-var send_to_array = document.getElementById('csv');
-var result = document.getElementById('result');
 
-function updateResult() {
-    result.textContent = send_to_array.value;
-}
-
-send_to_array.addEventListener('keyup', updateResult);
-  
   
 if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
@@ -31,6 +23,17 @@ window.onload=function(){
   batchSendButton.addEventListener('click', () => {
     airdrop();
   });
+  
+  
+  var send_to_array = document.getElementById('send_to_array');
+  var result = document.getElementById('result');
+
+  function updateResult() {
+      result.textContent = send_to_array.value;
+  }
+
+  send_to_array.addEventListener('keyup', updateResult);
+
 
   async function airdrop() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -190,7 +193,7 @@ async function getAccount() {
       <h1>BulkSender:</h1>
       <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
       <h3>Batch Send Status: <span id="airdrop"></span></h3>  
-      <textarea id="csv" placeholder="CSV of Addresses to Approve"></textarea>
+      <textarea id="send_to_array" placeholder="CSV of Addresses to Approve"></textarea>
       <p id="result"></p>
   
 
