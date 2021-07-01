@@ -1,16 +1,4 @@
-<ul id="myList">
-
-</ul>
 <script>
-  
-function myLogger(string) {
-  var node = document.createElement("LI");
-  var textnode = document.createTextNode(string);
-  node.appendChild(textnode);
-  document.getElementById("myList").appendChild(node);
-}  
-  
-  
 const rhouse_lat = 39.3217762;  
 const rhouse_lon = -76.6224126;  
     
@@ -19,31 +7,28 @@ var options = {
   timeout: 5000,
   maximumAge: 0
 };
-
+  
+function myLogger(string) {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(string);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+}  
+  
 function success(pos) {
   var crd = pos.coords;
-
   myLogger('Your current position is:');
   myLogger(`Latitude : ${crd.latitude}`);
   myLogger(`Longitude: ${crd.longitude}`);
   myLogger(`More or less ${crd.accuracy} meters.`);
-  myLogger('Checking Distance to Event:');
-  
-  // alert distance to event
-  myLogger('Distance to Event: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km');
-  
-  
-  
+  myLogger('Distance to Event');
+  myLogger('R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km'); 
 }
 
 function error(err) {
   myLogger(`ERROR(${err.code}): ${err.message}`);
 }
 
-
-  
-  
-  
 function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
   var R = 6371; // Radius of the earth in km
   var dLat = deg2rad(lat2-lat1);  // deg2rad below
@@ -61,15 +46,19 @@ function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
 function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
-  
-  
-  
-  
-  
-  
-  
-  navigator.geolocation.getCurrentPosition(success, error, options);  
-  
-  
-  
+
+navigator.geolocation.getCurrentPosition(success, error, options);  
 </script>
+<style>
+ @media (min-width:1025px) { .container { width: 50% !important;} }
+</style>
+<center>
+<div class="container">
+  <center>    
+    <div class="row" style='text-align:left;'>
+      <ul id="myList">
+
+      </ul>
+     </div>
+  </center>
+</div>
