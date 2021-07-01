@@ -1,23 +1,49 @@
+const fs = require('fs')
+var express = require('express');
+var app = express();
+app.all('/tools/metamask', function (req, res) {
+  //let html = fs.createReadStream('metamask.html')
+  res.send('Hello MetaMask!');
+});
+app.all('/tools/bulksender', function (req, res) {
+  //let html = fs.createReadStream('metamask.html')
+  res.send('Hello BulkSender!');
+});
+app.all('/tools/events', function (req, res) {
+  //let html = fs.createReadStream('metamask.html')
+  res.send('Hello Events!');
+});
+
+app.listen(3000, function () {
+  console.log('Listening to Port 3000');
+});
+
+
+
+
+
+/*
 var express = require('express')
 var app = express()
 const http = require('http')
 const fs = require('fs')
 
-
+var metamask = function (req, res, next) {
+  fs.createReadStream('metamask.html').pipe(res)
+  next()
+}
 
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('header.html').pipe(res)
+  
   fs.createReadStream('footer.html').pipe(res)
 })
 server.listen(process.env.PORT || 3000)
 
+*/
 
-app.all(/metamask/, function (req, res, next) {
-  console.log('Hello MetaMask')
-  next() // pass control to the next handler
-})
 
 
 
