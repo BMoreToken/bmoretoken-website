@@ -1,126 +1,5 @@
 <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.min.js"></script>
 <script>
-/**
- * Convert data in CSV (comma separated value) format to a javascript array.
- *
- * Values are separated by a comma, or by a custom one character delimeter.
- * Rows are separated by a new-line character.
- *
- * Leading and trailing spaces and tabs are ignored.
- * Values may optionally be enclosed by double quotes.
- * Values containing a special character (comma's, double-quotes, or new-lines)
- *   must be enclosed by double-quotes.
- * Embedded double-quotes must be represented by a pair of consecutive 
- * double-quotes.
- *
- * Example usage:
- *   var csv = '"x", "y", "z"\n12.3, 2.3, 8.7\n4.5, 1.2, -5.6\n';
- *   var array = csv2array(csv);
- *  
- * Author: Jos de Jong, 2010
- * 
- * @param {string} data      The data in CSV format.
- * @param {string} delimeter [optional] a custom delimeter. Comma ',' by default
- *                           The Delimeter must be a single character.
- * @return {Array} array     A two dimensional array containing the data
- * @throw {String} error     The method throws an error when there is an
- *                           error in the provided data.
- */ 
-function csv2array(data, delimeter) {
-  // Retrieve the delimeter
-  if (delimeter == undefined) 
-    delimeter = ',';
-  if (delimeter && delimeter.length > 1)
-    delimeter = ',';
-
-  // initialize variables
-  var newline = '\n';
-  var eof = '';
-  var i = 0;
-  var c = data.charAt(i);
-  var row = 0;
-  var col = 0;
-  var array = new Array();
-
-  while (c != eof) {
-    // skip whitespaces
-    while (c == ' ' || c == '\t' || c == '\r') {
-      c = data.charAt(++i); // read next char
-    }
-    
-    // get value
-    var value = "";
-    if (c == '\"') {
-      // value enclosed by double-quotes
-      c = data.charAt(++i);
-      
-      do {
-        if (c != '\"') {
-          // read a regular character and go to the next character
-          value += c;
-          c = data.charAt(++i);
-        }
-        
-        if (c == '\"') {
-          // check for escaped double-quote
-          var cnext = data.charAt(i+1);
-          if (cnext == '\"') {
-            // this is an escaped double-quote. 
-            // Add a double-quote to the value, and move two characters ahead.
-            value += '\"';
-            i += 2;
-            c = data.charAt(i);
-          }
-        }
-      }
-      while (c != eof && c != '\"');
-      
-      if (c == eof) {
-        throw "Unexpected end of data, double-quote expected";
-      }
-
-      c = data.charAt(++i);
-    }
-    else {
-      // value without quotes
-      while (c != eof && c != delimeter && c!= newline && c != ' ' && c != '\t' && c != '\r') {
-        value += c;
-        c = data.charAt(++i);
-      }
-    }
-
-    // add the value to the array
-    if (array.length <= row) 
-      array.push(new Array());
-    array[row].push(value);
-    
-    // skip whitespaces
-    while (c == ' ' || c == '\t' || c == '\r') {
-      c = data.charAt(++i);
-    }
-
-    // go to the next row or column
-    if (c == delimeter) {
-      // to the next column
-      col++;
-    }
-    else if (c == newline) {
-      // to the next row
-      col = 0;
-      row++;
-    }
-    else if (c != eof) {
-      // unexpected character
-      throw "Delimiter expected after character " + i;
-    }
-    
-    // go to the next character
-    c = data.charAt(++i);
-  }  
-  
-  return array;
-}  
-
   
 if (typeof window.ethereum !== 'undefined') {
   console.log('MetaMask is installed!');
@@ -148,8 +27,7 @@ window.onload=function(){
   var result = document.getElementById('result');
 
   function updateResult() {
-    var array = csv2array(send_to_array.value)
-    result.textContent = array.toString();
+    result.textContent = send_to_array.value.toString();
   }
 
   send_to_array.addEventListener('keyup', updateResult);
@@ -202,11 +80,9 @@ window.onload=function(){
  let airdrop_abi = [{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"},{"name":"_extraData","type":"bytes"}],"name":"approveAndCall","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":false,"stateMutability":"nonpayable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}];
  let airdrop_contract = new web3.eth.Contract(airdrop_abi,'0xbdd4f273c2b0f0b84a51bd733aac617d91159376', { from: '0x919d19A2Fb47D6E4731E7dB83214A9290C8A4CCb', gas: 100000});
  var send_to_array = document.getElementById('send_to_array');
- var array = csv2array(send_to_array.value);
- var erc20 = "[" + array + "]";
  //let send_to_array = ['0x8d4602A54116B44d6e26cd85a4027432e11022f6'];
  var batch = new web3.eth.BatchRequest();
- erc20.forEach(function (item, index) {
+ send_to_array.forEach(function (item, index) {
   console.log(web3.utils.isAddress(item))
   console.log(item, index); 
   batch.add(airdrop_contract.methods.approve(item,'100000000').send().then(console.log).catch(console.error));
@@ -314,8 +190,9 @@ async function getAccount() {
       <h3><span id="gas_price"></span></h3> 
       <h1>BulkSender:</h1>
       <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
-      <h3>Batch Send Status: <span id="airdrop"></span></h3>  
-      <textarea id="send_to_array" placeholder="CSV of Addresses to Approve"></textarea>
+      <h3>Batch Send Status: <span id="airdrop"></span></h3>
+      <p>Format: ['0x...','0x...','0x...','0x...','0x...']</p>
+      <textarea id="send_to_array" placeholder="Address List"></textarea>
       <p id="result"></p>
   
 
