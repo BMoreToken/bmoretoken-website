@@ -4,6 +4,12 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
   
+  
+  
+  
+// R House = 89CH+M3 Baltimore, Maryland  
+  
+  
 let map, infoWindow;
 
 function initMap() {
@@ -11,9 +17,21 @@ function initMap() {
     center: { lat: 39.2858, lng: -76.6131 },
     zoom: 12,
   });
+  
+  
+  
+  const image =
+    "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
+  const beachMarker = new google.maps.Marker({
+    position: { lat: 39.322934, lng: -76.6242656 },
+    map,
+    icon: image,
+  });
+  
+  
   infoWindow = new google.maps.InfoWindow();
   const locationButton = document.createElement("button");
-  locationButton.textContent = "Pan to Current Location";
+  locationButton.textContent = "Pan to My Current Location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
