@@ -31,7 +31,7 @@ chart.render();
 </script>
 <div class="container">
 	<div class="row justify-content-md-center">
-		<div class="col-md-auto" style="height: 450px; width: 600px;">
+		<div class="col-md-auto" style="height: 500px; width: 600px;">
 	     		<div id="chartContainer" style="height: 400px; width: 600px;"></div>
 			<p>Theory, design, analysis, implementation and applications.</p>
 			<small>Track Current Distribution at <a target='_Blank' href='https://etherscan.io/token/tokenholderchart/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>https://etherscan.io/token/tokenholderchart</a></small>
