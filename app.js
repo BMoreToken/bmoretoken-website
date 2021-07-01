@@ -31,6 +31,11 @@ var html_events = Object.create(null);
 fs.readFile("calendar.html", "utf-8", function(error, data) {
   html_events = data.toString();
 });
+// Event Pickup
+var html_pickup = Object.create(null);
+fs.readFile("pickup.html", "utf-8", function(error, data) {
+  html_pickup = data.toString();
+});
 // Routing 
 app.all('/', function (req, res) {
   res.send( html_header + html_tools + html_footer );
@@ -43,6 +48,9 @@ app.all('/bulksender', function (req, res) {
 });
 app.all('/events', function (req, res) {
   res.send(html_header + html_events + html_footer);
+});
+app.all('/pickup', function (req, res) {
+  res.send(html_header + html_pickup + html_footer);
 });
 // Start Server
 app.listen(3000, function () {
