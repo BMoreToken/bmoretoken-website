@@ -1,4 +1,15 @@
+<ul id="myList">
+
+</ul>
 <script>
+  
+function myLogger(string) {
+  var node = document.createElement("LI");
+  var textnode = document.createTextNode(string);
+  node.appendChild(textnode);
+  document.getElementById("myList").appendChild(node);
+}  
+  
   
 const rhouse_lat = 39.3217762;  
 const rhouse_lon = -76.6224126;  
@@ -12,21 +23,21 @@ var options = {
 function success(pos) {
   var crd = pos.coords;
 
-  document.write('Your current position is:');
-  document.write(`Latitude : ${crd.latitude}`);
-  document.write(`Longitude: ${crd.longitude}`);
-  document.write(`More or less ${crd.accuracy} meters.`);
-  document.write('Checking Distance to Event:');
+  myLogger('Your current position is:');
+  myLogger(`Latitude : ${crd.latitude}`);
+  myLogger(`Longitude: ${crd.longitude}`);
+  myLogger(`More or less ${crd.accuracy} meters.`);
+  myLogger('Checking Distance to Event:');
   
   // alert distance to event
-  document.write('Distance to Event: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km');
+  myLogger('Distance to Event: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km');
   
   
   
 }
 
 function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
+  myLogger(`ERROR(${err.code}): ${err.message}`);
 }
 
 
