@@ -7,9 +7,9 @@ let html_footer = fs.createReadStream('footer.html')
 
 app.all('/', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
-  html_header.pipe(res);
-  res.send('Hello Home!');
-  html_footer.pipe(res)
+
+  res.send( html_header.toString() + 'Hello Home!' + html_footer.toString());
+
 });
 app.all('/metamask', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
