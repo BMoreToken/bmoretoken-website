@@ -2,7 +2,29 @@ var express = require('express')
 var app = express()
 const http = require('http')
 const fs = require('fs')
+
+
+
+
 const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'content-type': 'text/html' })
+  fs.createReadStream('header.html').pipe(res)
+  fs.createReadStream('footer.html').pipe(res)
+})
+server.listen(process.env.PORT || 3000)
+
+
+app.all(/metamask/, function (req, res, next) {
+  console.log('Hello MetaMask')
+  next() // pass control to the next handler
+})
+
+
+
+
+/*
+
+const server = http.createServer((req, res, next) => {
   res.writeHead(200, { 'content-type': 'text/html' })
   fs.createReadStream('header.html').pipe(res)
   //print('1').pipe(res)
@@ -27,6 +49,10 @@ const server = http.createServer((req, res) => {
   fs.createReadStream('footer.html').pipe(res)
 })
 server.listen(process.env.PORT || 3000)
+*/
+
+
+
 /*
 app.get(/metamask/, function (req, res) {  
   const http = require('http')
