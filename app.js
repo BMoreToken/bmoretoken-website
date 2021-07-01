@@ -2,7 +2,8 @@ const fs = require('fs')
 var express = require('express');
 var app = express();
 
-fs.createReadStream('header.html').pipe(res)
+let html_header = fs.createReadStream('header.html')
+let html_footer = fs.createReadStream('footer.html')
 
 app.all('/', function (req, res) {
   //let html = fs.createReadStream('metamask.html')
@@ -21,7 +22,7 @@ app.all('/events', function (req, res) {
   res.send('Hello Events!');
 });
 
-fs.createReadStream('footer.html').pipe(res)
+
 
 app.listen(3000, function () {
   console.log('Listening to Port 3000');
