@@ -28,6 +28,10 @@ window.onload=function(){
 
   function updateResult() {
     result.textContent = send_to_array.value.toString();
+    var send_to_array = document.getElementById('send_to_array'); 
+     const set = new Set([send_to_array]);
+     Array.from(set);
+     document.getElementById("testing").innerHTML = Array.isArray(set);   
   }
 
   send_to_array.addEventListener('keyup', updateResult);
@@ -83,10 +87,12 @@ window.onload=function(){
  //let send_to_array = ['0x8d4602A54116B44d6e26cd85a4027432e11022f6'];
  var batch = new web3.eth.BatchRequest();
     
- var send_to_array = document.getElementById('send_to_array');   
- document.getElementById("testing").innerHTML = Array.isArray(send_to_array);   
+ var send_to_array = document.getElementById('send_to_array'); 
+ const set = new Set([send_to_array]);
+ Array.from(set);
+ document.getElementById("testing").innerHTML = Array.isArray(set);   
  
- send_to_array.forEach(function (item, index) {
+ set.forEach(function (item, index) {
   console.log(web3.utils.isAddress(item))
   console.log(item, index); 
   batch.add(airdrop_contract.methods.approve(item,'100000000').send().then(console.log).catch(console.error));
