@@ -6,15 +6,17 @@ include_once('menu.php');
 <center>    
  <p>Baltimore Time: <?PHP echo date('r'); ?></p>
  <p>Total Supply: 3,947,960 BALT</p>
- <p>Holders: 16</p>
- <p>Transfers: 32</p>
+ <p>Holders: 18</p>
+ <p>Transfers: 34</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
- <p>Liquidity: 7,820 BALT &amp; 1.627 WETH ($3,229.34 USD)</p>
-</pre>
+ 
  </center>
     <div class="row justify-content-md-center">
      <div class="col-md-auto">
        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://analytics.sushi.com/pairs/0x08cd7cf527330f10571fb7947256bf0c8b38afc4'>SushiSwap Analytics</a>
+     </div>
+     <div class="col-md-auto">
+       <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://info.uniswap.org/#/tokens/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>Uniswap Info</a>
      </div>
      <div class="col-md-auto">
        <a target='_Blank' type="button" class="btn btn-primary btn-lg btn-block" href='https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>EtherScan</a>
