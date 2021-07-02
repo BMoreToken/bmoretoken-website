@@ -1,6 +1,6 @@
 <script>
-const rhouse_lat = 39.3217762;  
-const rhouse_lon = -76.6224126;  
+const next_event_lat = 39.2840112;  
+const next_event_lon = -76.6216646;  
     
 var options = {
   enableHighAccuracy: true,
@@ -22,7 +22,7 @@ function success(pos) {
   myLogger(`Longitude: ${crd.longitude}`);
   myLogger(`More or less ${crd.accuracy} meters.`);
   myLogger('Distance to Event');
-  myLogger('R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,crd.latitude,crd.longitude).toFixed(1) + ' km'); 
+  myLogger('Oriole Park at Camden Yards: ' + getDistanceFromLatLonInKm(next_event_lat,next_event_lon,crd.latitude,crd.longitude).toFixed(1) + ' km'); 
 }
 
 function error(err) {
@@ -62,7 +62,7 @@ function getLocation() {
 function showPosition(position) {
  // x.innerHTML = "Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude;
  var y = document.getElementById("distance");
- y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
+ y.innerHTML = 'Oriole Park at Camden Yards: ' + getDistanceFromLatLonInKm(next_event_lat,next_event_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
 }
 </script>
 
@@ -81,7 +81,7 @@ function showPosition(position) {
 
       </ul>
 
-    <button onclick="getLocation()">Live Distance to Event</button>
+    <button onclick="getLocation()">Check Location to Claim</button>
     <h1 id="distance"></h1>
     <p id="demo"></p>
     
