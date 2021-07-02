@@ -2,6 +2,13 @@
 $title = 'BMoreToken Project Home (BALT)';
 include_once('menu.php');
 ?>
+<link href="jquery.counter-analog.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="jquery.counter-analog2.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="jquery.counter-analog3.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="jquery.counter.js" type="text/javascript"></script>
+
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
 </style>
@@ -13,6 +20,15 @@ include_once('menu.php');
  <p>Transfers: 34</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
 
+ 
+  <span class="counter counter-analog" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
+    <script>
+    $('.counter').counter({});
+    </script>
+ 
+ 
+ 
+ 
  <div class="row" style='text-align:left;'>
  <h2>Updates</h2>
   <li>O's Game tonight! ( Win = Supply Reduction! )</li>
