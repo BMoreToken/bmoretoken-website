@@ -1,3 +1,41 @@
+<script src="web3.min.js"></script>
+<script>
+window.onload=function(){ 
+ web3 = new Web3(web3.currentProvider);
+ const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+ const account = accounts[0];
+ document.getElementById('mm').innerText = account.toString();
+ let tokenAddress = '0xbdd4f273c2b0f0b84a51bd733aac617d91159376';
+  let minABI = [
+        // balanceOf
+        {
+          "constant":true,
+          "inputs":[{"name":"_owner","type":"address"}],
+          "name":"balanceOf",
+          "outputs":[{"name":"balance","type":"uint256"}],
+          "type":"function"
+        },
+        // decimals
+        {
+          "constant":true,
+          "inputs":[],
+          "name":"decimals",
+          "outputs":[{"name":"","type":"uint8"}],
+          "type":"function"
+        }
+      ];
+
+      let contract = web3.eth.contract(minABI).at(tokenAddress);
+      contract.balanceOf(account, (error, balance) => {
+        contract.decimals((error, decimals) => {
+          balance = balance.div(10**decimals);
+          console.log(balance.toString());
+          document.getElementById('balt').innerText = balance.toString();
+        });
+      });
+} 
+ 
+</script>
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
 </style>
@@ -6,7 +44,7 @@
   <center>    
     <div class="row" style='text-align:left;'>
       <h3>This is our collection of Web 3.0 ERC-20 Tools coded specificly for $BALT.</h3>
-     <p>You will need to connect <u>MetaMask <b>and</b> Enable GPS</u> to <i>unlock features</i>.</p>
+     <p>You will need to connect <u>MetaMask <a id='mm'></a> <a id='balt'></a> <b>and</b> Enable GPS</u> to <i>unlock features</i>.</p>
      <ol>
       <li>Event Map <a href="/tools/events">CLICK</a></li>
       <li>Batch Send $BALT <a href="/tools/bulksender">CLICK</a></li>
