@@ -21,8 +21,9 @@ include_once('menu.php');
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
 
  
-  <span class="counter counter-analog" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
+  <span id='countdown' class="counter counter-analog" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
+     document.getElementById('countdown').innerText = "00.02:06:20";
     $('.counter').counter({});
     </script>
  
