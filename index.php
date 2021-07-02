@@ -31,6 +31,7 @@ include_once('menu.php');
         }
       });
       </script> 
+ </div>
  </center>
  
   <div class="row justify-content-md-center">
