@@ -20,11 +20,11 @@
      <li>2021-06-18 Friday Airdrop, Team Expansion: Sr. Systems Engineer</li>
      <li>2021-06-19 SiteMap.xml, Google/Bing Setup, Bulk Sending Contract</li>
      <li>2021-06-22 Confirm/Adjust Google Analytics, Connect to Search Console</li>
-     <li>2021-06-23 Batch Transaction ( multiple tx still )</li>
-     <li>2021-06-24 Batch Transaction ( multiple tx still )</li>
-     <li>2021-06-25 Batch Transaction ( multiple tx still )</li>
-     <li>2021-06-26 Batch Transaction ( multiple tx still )</li>
+     <li>...</li>
      <li>2021-06-27 Batch Transaction ( multiple tx still )</li>
+     <li>...</li>
+     <li>2021-07-01 Geo-Dropping $BALT across Baltimore</li>
+     <li>2021-07-02 Uniswap v3 Liquidity, Burning $BALT when Orioles or Ravens Win</li>
     </div>
 </div>
 </center>
