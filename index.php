@@ -10,7 +10,7 @@ include_once('menu.php');
 <script src="jquery.counter.js" type="text/javascript"></script>
 
 <style>
- @media (min-width:1025px) { .container { width: 50% !important;} }
+ @media (min-width:1025px) { .container { width: 60% !important;} }
  @font-face {
   font-family: 'Blazed';
   src: URL('Blazed.ttf') format('truetype');
