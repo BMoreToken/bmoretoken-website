@@ -2,6 +2,16 @@
 <script>
 window.onload=function(){ 
  web3 = new Web3(web3.currentProvider);
+ 
+ const unlockButton = document.querySelector('.unlockButton');
+ 
+ unlockButton.addEventListener('click', () => {
+  getAccount();
+});
+ 
+ 
+ async function getAccount() {
+ 
  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
  const account = accounts[0];
  document.getElementById('mm').innerText = account.toString();
@@ -34,7 +44,7 @@ window.onload=function(){
         });
       });
 } 
- 
+}
 </script>
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
@@ -45,6 +55,8 @@ window.onload=function(){
     <div class="row" style='text-align:left;'>
       <h3>This is our collection of Web 3.0 ERC-20 Tools coded specificly for $BALT.</h3>
      <p>You will need to connect <u>MetaMask <a id='mm'></a> <a id='balt'></a> <b>and</b> Enable GPS</u> to <i>unlock features</i>.</p>
+      <button class="unlockButton">Unlock Features</button>
+
      <ol>
       <li>Event Map <a href="/tools/events">CLICK</a></li>
       <li>Batch Send $BALT <a href="/tools/bulksender">CLICK</a></li>
