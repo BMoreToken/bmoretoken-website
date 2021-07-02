@@ -43,8 +43,6 @@ include_once('menu.php');
     
  </div>
  
- 
-  <br> <br>
     <div class="row justify-content-md-center">
       
       <h3>Liquidity:</h3>
