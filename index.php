@@ -5,8 +5,8 @@ include_once('menu.php');
 <link href="jquery.counter-analog.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="jquery.counter-analog2.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="jquery.counter-analog3.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
 <script src="jquery.counter.js" type="text/javascript"></script>
 
 <style>
@@ -43,8 +43,11 @@ include_once('menu.php');
 
     var min = Math.floor(leftSec/(60));
     var leftSec = leftSec - min * 60;
+     
+    var formated_countdown = days "." + hrs + ":" + min + ":" + leftSec;
 
-    document.getElementById('countdown').innerText = days "." + hrs + ":" + min + ":" + leftSec ;
+    document.getElementById('countdown').innerText =  formated_countdown;
+     
     $('.counter').counter({});
     </script>
  
