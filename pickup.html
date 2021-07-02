@@ -47,8 +47,29 @@ function deg2rad(deg) {
   return deg * (Math.PI/180)
 }
 
+    
 navigator.geolocation.getCurrentPosition(success, error, options);  
+
+    
+var x = document.getElementById("demo");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.watchPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) {
+ // x.innerHTML = "Latitude: " + position.coords.latitude +  "<br>Longitude: " + position.coords.longitude;
+ var y = document.getElementById("distance");
+ y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
+}
 </script>
+
+
+
+
+
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
 </style>
@@ -59,29 +80,13 @@ navigator.geolocation.getCurrentPosition(success, error, options);
       <ul id="myList">
 
       </ul>
-     </div>
+
+    <button onclick="getLocation()">Live Distance to Event</button>
+    <h1 id="distance"></h1>
+    <p id="demo"></p>
+    
+
+        
+         </div>
   </center>
 </div>
-    
-    <hr>
-    
-    <button onclick="getLocation()">Live Distance to Event</button>
-    <div id="distance"></div>
-<p id="demo"></p>
-    
-    <script>
-var x = document.getElementById("demo");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.watchPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude +
-  "<br>Longitude: " + position.coords.longitude;
-    var y = document.getElementById("distance");
-    y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
-}
-</script>
