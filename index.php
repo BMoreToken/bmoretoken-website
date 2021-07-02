@@ -57,41 +57,23 @@ include_once('menu.php');
 
 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
-  <div id="tradingview_2c03c"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BMoreToken</span></a> by TradingView</div>
-  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-  <script type="text/javascript">
-  new TradingView.MediumWidget(
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/BALTWETH/?exchange=SUSHISWAP" rel="noopener" target="_blank"><span class="blue-text">BALTWETH Rates</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
   {
-  "symbols": [
-    [
-      "BMoreToken",
-      "SUSHISWAP:BALTWETH|1M"
-    ],
-    [
-      "Ethereum",
-      "CRYPTOCAP:ETH|1M"
-    ],
-    [
-      "Bitcoin",
-      "CRYPTOCAP:BTC|1M"
-    ]
-  ],
-  "chartOnly": false,
-  "width": 1000,
-  "height": "400",
+  "symbol": "SUSHISWAP:BALTWETH",
+  "width": 350,
+  "height": 220,
   "locale": "en",
+  "dateRange": "12M",
   "colorTheme": "light",
-  "gridLineColor": "rgba(42 ,46, 57, 0)",
-  "trendLineColor": "#2962ff",
-  "fontColor": "#787b86",
-  "underLineColor": "rgba(41, 98, 255, 0.3)",
+  "trendLineColor": "rgba(255, 152, 0, 1)",
+  "underLineColor": "rgba(152, 0, 255, 0.3)",
   "underLineBottomColor": "rgba(41, 98, 255, 0)",
   "isTransparent": false,
   "autosize": false,
-  "container_id": "tradingview_2c03c"
+  "largeChartUrl": ""
 }
-  );
   </script>
 </div>
 <!-- TradingView Widget END -->
