@@ -29,7 +29,7 @@ include_once('menu.php');
   <span id='countdown' class="counter counter-analog2" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
     var date1 = new Date();    
-    var date2 = new Date("2021/07/02 19:05:00");
+    var date2 = new Date("2021/07/02 21:38:00");
     //Customise date2 for your required future time
 
     var diff = (date2 - date1)/1000;
