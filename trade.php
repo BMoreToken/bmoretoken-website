@@ -56,7 +56,7 @@ include_once('menu.php');
       </div>
      
     <div class="col-md-auto">
-        <a target='_Blank' type="button" class="btn btn-warning btn-lg btn-block" href='/liquidity_bonus.php'>Liquidity Bonus Details</a>
+        <a target='_Blank' type="button" class="btn btn-warning btn-lg btn-block" href='/liquidity_bonus.php'>Liquidity Bonus</a>
       </div>
       
      
