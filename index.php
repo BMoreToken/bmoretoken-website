@@ -24,7 +24,7 @@ include_once('menu.php');
  <p>Transfers: 34</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
 
- <span style="font-family: 'Blazed', Blazed; font-height:25px;">NEXT POSSIBLE BURN</span><br>
+ <span style="font-family: 'Blazed', Blazed; font-height:30px;">NEXT POSSIBLE BURN</span><br>
  
   <span id='countdown' class="counter counter-analog2" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
@@ -45,10 +45,11 @@ include_once('menu.php');
     var leftSec = leftSec - min * 60;
      
     var formated_countdown =  "00." + hrs + ":" + min + ":" + leftSec;
-
+    console.log('Next Event: ' + formated_countdown)
     document.getElementById('countdown').innerText =  formated_countdown;
      
     $('.counter').counter({});
+     
     </script>
  
  
