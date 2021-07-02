@@ -9,9 +9,17 @@ include_once('menu.php');
  <p>Holders: 18</p>
  <p>Transfers: 34</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
- 
+</center>
+
+ <center>
+ <h2>What to Watch</h2>
+  <li>O's Game tonight! ( Win = Supply Reduction! )</li>
+  <li>Liquidity Open at Uniswap v3</li>
+  <li>Events Calendar and Map</li>
  </center>
-    <div class="row justify-content-md-center">
+  
+  
+  <div class="row justify-content-md-center">
      <div class="col-md-auto">
        <a target='_Blank' type="button" class="btn btn-success btn-lg btn-block" href='https://analytics.sushi.com/pairs/0x08cd7cf527330f10571fb7947256bf0c8b38afc4'>SushiSwap Analytics</a>
      </div>
@@ -24,12 +32,12 @@ include_once('menu.php');
       <div class="col-md-auto">
         <a target='_Blank' type="button" class="btn btn-info btn-lg btn-block" href='https://blockchain.coinmarketcap.com/address/ethereum/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>CoinMarketCap</a>
       </div> 
-     
-        
     </div>
 
+ 
+ 
+ 
  <center>
-  
      <br>
 
 <!-- TradingView Widget BEGIN -->
