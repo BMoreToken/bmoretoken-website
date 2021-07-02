@@ -11,6 +11,10 @@ include_once('menu.php');
 
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
+ @font-face {
+  font-family: 'Blazed';
+  src: URL('Blazed.ttf') format('truetype');
+}
 </style>
 <div class="container">
 <center>    
@@ -20,8 +24,9 @@ include_once('menu.php');
  <p>Transfers: 34</p>
  <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
 
+ <span style="font-family: 'Blazed', Blazed; font-height:25px;">NEXT POSSIBLE BURN</span><br>
  
-  <span id='countdown' class="counter counter-analog" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
+  <span id='countdown' class="counter counter-analog2" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
     var date1 = new Date();    
     var date2 = new Date("2021/07/02 21:38:00");
