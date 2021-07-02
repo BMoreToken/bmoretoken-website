@@ -1,17 +1,7 @@
 <script src="web3.min.js"></script>
 <script>
-window.onload=function(){ 
- web3 = new Web3(web3.currentProvider);
- 
- const unlockButton = document.querySelector('.unlockButton');
- 
- unlockButton.addEventListener('click', () => {
-  getAccount();
-});
- 
- 
- async function getAccount() {
-   
+ navigator.geolocation.getCurrentPosition(success, error, options);  
+
  var x = document.getElementById("gps");
  function getLocation() {
    if (navigator.geolocation) {
@@ -26,6 +16,21 @@ window.onload=function(){
   //y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
  }
 
+ 
+ 
+window.onload=function(){ 
+ web3 = new Web3(web3.currentProvider);
+ 
+ const unlockButton = document.querySelector('.unlockButton');
+ 
+ unlockButton.addEventListener('click', () => {
+  getAccount();
+});
+ 
+ 
+ async function getAccount() {
+   
+ 
   
   document.getElementById('unlock').style.visibility = 'hidden';
   
