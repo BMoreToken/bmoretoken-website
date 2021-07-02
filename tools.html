@@ -11,7 +11,25 @@ window.onload=function(){
  
  
  async function getAccount() {
- 
+   
+ var x = document.getElementById("gps");
+ function getLocation() {
+   if (navigator.geolocation) {
+     navigator.geolocation.watchPosition(showPosition);
+   } else {
+     x.innerHTML = "Geolocation is not supported by this browser.";
+   }
+ }
+ function showPosition(position) {
+  x.innerHTML = position.coords.latitude +  " : " + position.coords.longitude;
+  //var y = document.getElementById("distance");
+  //y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
+ }
+
+  
+  document.getElementById('unlock').style.visibility = 'hidden';
+  
+  
  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
  const account = accounts[0];
  document.getElementById('mm').innerText = account.toString();
@@ -54,8 +72,8 @@ window.onload=function(){
   <center>    
     <div class="row" style='text-align:left;'>
       <h3>This is our collection of Web 3.0 ERC-20 Tools coded specificly for $BALT.</h3>
-     <p>You will need to connect <u>MetaMask <a id='mm'></a> <a id='balt'></a> <b>and</b> Enable GPS</u> to <i>unlock features</i>.</p>
-      <button class="unlockButton">Unlock Features</button>
+     <p>You will need to connect <u>MetaMask <a id='mm'></a> <a id='balt'></a> <b>and</b> Enable GPS</u> <a id='gps'></a> to <i>unlock features</i>.</p>
+      <button id='unlock' class="unlockButton">Unlock Features</button>
 
      <ol>
       <li>Event Map <a href="/tools/events">CLICK</a></li>
