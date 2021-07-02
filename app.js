@@ -52,7 +52,7 @@ app.all('/bulksender', function (req, res) {
   res.send(html_header + html_bulk + html_footer);
 });
 app.all('/events', function (req, res) {
-  res.send(html_header + html_events + html_footer);
+  res.send(html_header + html_events);
 });
 app.all('/pickup', function (req, res) {
   res.send(html_header + html_pickup + html_footer);
