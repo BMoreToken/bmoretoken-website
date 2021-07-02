@@ -23,7 +23,23 @@ include_once('menu.php');
  
   <span id='countdown' class="counter counter-analog" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
-     document.getElementById('countdown').innerText = "00.02:06:20";
+    var date1 = new Date();    
+    var date2 = new Date("2021/07/02 21:38:00");
+    //Customise date2 for your required future time
+
+    var diff = (date2 - date1)/1000;
+    var diff = Math.abs(Math.floor(diff));
+
+    var days = Math.floor(diff/(24*60*60));
+    var leftSec = diff - days * 24*60*60;
+
+    var hrs = Math.floor(leftSec/(60*60));
+    var leftSec = leftSec - hrs * 60*60;
+
+    var min = Math.floor(leftSec/(60));
+    var leftSec = leftSec - min * 60;
+
+    document.getElementById('countdown').innerText = days "." + hrs + ":" + min + ":00";
     $('.counter').counter({});
     </script>
  
