@@ -1,4 +1,4 @@
-<?PHP $title = 'Project History for $BALT'; include_once('menu.php'); ?>
+<?PHP $title = 'When Baltimore Wins, $BALT Wins'; include_once('menu.php'); ?>
 <style>
  @media (min-width:1025px) { .container { width: 50% !important;} }
 </style>
