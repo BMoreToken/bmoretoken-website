@@ -2,16 +2,15 @@
 <script>
  
 
- var x = document.getElementById("gps");
  function getLocation() {
    if (navigator.geolocation) {
      navigator.geolocation.watchPosition(showPosition);
    } else {
-     x.innerHTML = "Geolocation is not supported by this browser.";
+     document.getElementById("gps").innerHTML = "Geolocation is not supported by this browser.";
    }
  }
  function showPosition(position) {
-  x.innerHTML = position.coords.latitude +  " : " + position.coords.longitude;
+  document.getElementById("gps").innerHTML = position.coords.latitude +  " : " + position.coords.longitude;
   //var y = document.getElementById("distance");
   //y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
  }
@@ -34,7 +33,7 @@ window.onload=function(){
    
  
   
-  document.getElementById('unlock').style.visibility = 'hidden';
+ // document.getElementById('unlock').style.visibility = 'hidden';
   
   
  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
