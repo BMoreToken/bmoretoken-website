@@ -39,7 +39,7 @@ include_once('menu.php');
     var min = Math.floor(leftSec/(60));
     var leftSec = leftSec - min * 60;
 
-    document.getElementById('countdown').innerText = days "." + hrs + ":" + min + ":00";
+    document.getElementById('countdown').innerText = days "." + hrs + ":" + min + ":" + leftSec ;
     $('.counter').counter({});
     </script>
  
