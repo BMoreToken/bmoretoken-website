@@ -11,13 +11,13 @@
 
       <h3>Next Chance for Burn - Tonight @ 7:05 PM</h3>
 
-      <a href='https://www.mlb.com/orioles/schedule/'>https://www.mlb.com/orioles/schedule/</a>
+      <a target='_Blank' href='https://www.mlb.com/orioles/schedule/'>https://www.mlb.com/orioles/schedule/</a>
 
       <h1>If the Baltimore Ravens Win - We will burn their score of $BALT tokens<h1>
 
       <h3>Next Chance for Burn - Sat 08/14 @ 7:00 PM EDT</h3>
 
-      <a href='https://www.baltimoreravens.com/schedule/'>https://www.baltimoreravens.com/schedule/</a>
+      <a target='_Blank' href='https://www.baltimoreravens.com/schedule/'>https://www.baltimoreravens.com/schedule/</a>
 
     </div>
 </div>
