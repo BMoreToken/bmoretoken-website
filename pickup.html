@@ -66,8 +66,8 @@ navigator.geolocation.getCurrentPosition(success, error, options);
     <hr>
     
     <button onclick="getLocation()">Live Distance to Event</button>
-
-<p id="distance"></p>
+    <div id="distance"></div>
+<p id="demo"></p>
     
     <script>
 var x = document.getElementById("demo");
@@ -81,6 +81,7 @@ function getLocation() {
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude +
   "<br>Longitude: " + position.coords.longitude;
-   document.getElementById('distance').innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
+    var y = document.getElementById("distance");
+    y.innerHTML = 'R House: ' + getDistanceFromLatLonInKm(rhouse_lat,rhouse_lon,position.coords.latitude,position.coords.longitude).toFixed(1) + ' km'; 
 }
 </script>
