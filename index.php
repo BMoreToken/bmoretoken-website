@@ -44,7 +44,7 @@ include_once('menu.php');
     var min = Math.floor(leftSec/(60));
     var leftSec = leftSec - min * 60;
      
-    var formated_countdown = days "." + hrs + ":" + min + ":" + leftSec;
+    var formated_countdown =  "00." + hrs + ":" + min + ":" + leftSec;
 
     document.getElementById('countdown').innerText =  formated_countdown;
      
