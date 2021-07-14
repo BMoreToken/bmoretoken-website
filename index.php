@@ -19,12 +19,9 @@ include_once('menu.php');
 <div class="container">
 <center>    
  <p>Baltimore Time: <?PHP echo date('r'); ?></p>
- <p>Total Supply: 3,947,960 BALT</p>
- <p>Holders: 18</p>
- <p>Transfers: 34</p>
- <p>Address: 0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</p>
+ <p>Address 0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</p>
 
- <span style="font-family: 'Blazed', Blazed; font-height:30px;">NEXT POSSIBLE BURN</span><br>
+ <span style="font-family: 'Blazed', Blazed; font-height:40px;">NEXT POSSIBLE BURN</span><br>
  
   <span id='countdown' class="counter counter-analog2" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
     <script>
@@ -57,7 +54,8 @@ include_once('menu.php');
  
  <div class="row" style='text-align:left;'>
  <h2>Updates</h2>
-  <li>O's Game tonight! ( Win = Supply Reduction! )</li>
+  <li><b>AtomicDEX</b> Swapping BMoreToken for Litecoin (BALT-LTC) Online!!! <a href='https://atomicdex.bmoretoken.com/'>View Orderbook</a></li>
+  <li>O's Game! ( Win = Supply Reduction! )</li>
   <li>Liquidity Open at Uniswap v3</li>
   <li>Events Calendar and Map</li>
  
