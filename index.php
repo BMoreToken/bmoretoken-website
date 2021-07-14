@@ -22,7 +22,7 @@ include_once('menu.php');
  <p>Total Supply: 3,947,960 BALT</p>
  <p>Holders: 18</p>
  <p>Transfers: 34</p>
- <p>Address: 0xbdd4f273c2b0f0b84a51bd733aac617d91159376</p>
+ <p>Address: 0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</p>
 
  <span style="font-family: 'Blazed', Blazed; font-height:30px;">NEXT POSSIBLE BURN</span><br>
  
