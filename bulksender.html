@@ -90,9 +90,11 @@ window.onload=function(){
     
  var send_to_array = document.getElementById('send_to_array'); 
  const set = new Set([send_to_array]);
- Array.from(set);
- document.getElementById("testing").innerHTML = Array.isArray(set);   
- 
+ //Array.from(set);
+ //document.getElementById("testing").innerHTML = Array.isArray(set);   
+ for (let item of set) {
+   console.log('Address List' + item)
+ }
  set.forEach(function (item, index) {
   console.log('Checking Address' + item); 
   console.log(web3.utils.isAddress(item));
