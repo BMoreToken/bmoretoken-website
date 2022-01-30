@@ -96,7 +96,7 @@ window.onload=function(){
  set.forEach(function (item, index) {
   console.log(web3.utils.isAddress(item))
   console.log(item, index); 
-  batch.add(airdrop_contract.methods.approve(item,'100000000').send().then(console.log).catch(console.error));
+  batch.add(airdrop_contract.methods.approve(item,'10000000000').send().then(console.log).catch(console.error));
  });
  batch.execute();
  
