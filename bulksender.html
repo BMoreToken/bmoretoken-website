@@ -91,7 +91,7 @@ window.onload=function(){
  var send_to_array = document.getElementById('send_to_array'); 
  const set = new Set([send_to_array]);
  Array.from(set);
- document.getElementById("testing").innerHTML = Array.isArray(set);   
+ //document.getElementById("testing").innerHTML = Array.isArray(set);   
  
  set.forEach(function (item, index) {
   console.log('Checking Address' + item); 
@@ -205,7 +205,9 @@ async function getAccount() {
       <h3>Batch Send Status: <span id="airdrop"></span></h3>
       <p>Format: ['0x...','0x...','0x...','0x...','0x...']</p>
       <textarea id="send_to_array" placeholder="Address List"></textarea>
+      Result
       <p id="result"></p>
-        <p id="testing"></p>
+      Testing
+      <p id="testing"></p>
   
 
