@@ -1,4 +1,4 @@
-name: remote ssh command
+name: Remote Docker Build
 on: 
   push:
       branches:
@@ -6,7 +6,7 @@ on:
 jobs:
 
   build:
-    name: Build
+    name: Remote Docker Build
     runs-on: ubuntu-latest
     steps:
     - name: executing remote ssh commands using password
