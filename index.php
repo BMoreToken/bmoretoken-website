@@ -21,58 +21,8 @@ include_once('menu.php');
  <p>Baltimore Time: <?PHP echo date('r'); ?></p>
  <p>Address 0xbDd4f273C2b0f0B84a51BD733AAc617D91159376</p>
 
- <span style="font-family: 'Blazed', Blazed; font-height:40px;">NEXT POSSIBLE BURN</span><br>
- 
-  <span id='countdown' class="counter counter-analog2" data-direction="down" data-format="20.23:59:59">00.00:06:00</span>
-    <script>
-    var date1 = new Date();    
-    var date2 = new Date("2021/07/03 22:05:00");
-    //Customise date2 for your required future time
 
-    var diff = (date2 - date1)/1000;
-    var diff = Math.abs(Math.floor(diff));
-
-    var days = Math.floor(diff/(24*60*60));
-    var leftSec = diff - days * 24*60*60;
-
-    var hrs = Math.floor(leftSec/(60*60));
-    var leftSec = leftSec - hrs * 60*60;
-
-    var min = Math.floor(leftSec/(60));
-    var leftSec = leftSec - min * 60;
-     
-    var formated_countdown =  "00." + hrs + ":" + min + ":" + leftSec;
-    console.log('Next Event: ' + formated_countdown)
-    document.getElementById('countdown').innerText =  formated_countdown;
-     
-    $('.counter').counter({});
-     
-    </script>
  
- 
- 
- 
- <div class="row" style='text-align:left;'>
- <h2>Updates</h2>
-  <li><b>AtomicDEX</b> Swapping BMoreToken for Litecoin (BALT-LTC) Online!!! <a href='https://atomicdex.bmoretoken.com/'>View Orderbook</a></li>
-  <li>O's Game! ( Win = Supply Reduction! )</li>
-  <li>Liquidity Open at Uniswap v3</li>
-  <li>Events Calendar and Map</li>
- 
-  
- <h3>Upcoming Events</h3>
-      <div id="success"></div>
-      <div id="error"></div>
-      <script>
-      $( "#success" ).load( "https://www.bmorecoin.com/event_widget.php", function( response, status, xhr ) {
-        if ( status == "error" ) {
-          var msg = "Sorry but there was an error: ";
-          $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
-        }
-      });
-      </script> 
- </div>
- </center>
  
   <div class="row justify-content-md-center">
      <div class="col-md-auto">
