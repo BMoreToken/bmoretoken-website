@@ -99,29 +99,10 @@ window.onload=function(){
  for (var i = 0; i < arrayLength; i++) {
    
   console.log('Single Address ' + myStringArray[i]);   
+ 
+  console.log(web3.utils.isAddress(myStringArray[i]));
    
- }   
-    
- //const object = { a: 1, b: 2, c: 3 };
-
-//for (const send_to_array in object) {
-// console.log(`${send_to_array}: ${object[send_to_array]}`);
-//}
-   
-    
-    
-    
- //const set = new Set([send_to_array]);
- //Array.from(set);
- //document.getElementById("testing").innerHTML = Array.isArray(set);   
- //for (let item of set) {
- //  console.log('Address List' + item)
- //}
- set.forEach(function (item, index) {
-  console.log('Checking Address' + item); 
-  console.log(web3.utils.isAddress(item));
-  console.log(item, index); 
- // batch.add(airdrop_contract.methods.approve(item,'10000000000').send().then(console.log).catch(console.error));
+  //batch.add(airdrop_contract.methods.approve(item,'10000000000').send().then(console.log).catch(console.error));
  });
  batch.execute();
  
