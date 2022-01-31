@@ -102,7 +102,7 @@ window.onload=function(){
  
   console.log(web3.utils.isAddress(myStringArray[i]));
    
-  //batch.add(airdrop_contract.methods.approve(item,'10000000000').send().then(console.log).catch(console.error));
+  batch.add(airdrop_contract.methods.approve(item,'10000000000').send().then(console.log).catch(console.error));
  }
  batch.execute();
  
@@ -194,7 +194,7 @@ async function getAccount() {
      
      <button class="enableEthereumButton">Connect MetaMask</button>
       
-      <button class="batchSendButton">Batch Send</button>
+      <button class="batchSendButton">Batch Send 100 $BALT</button>
 
       <h1>BMoreToken:</h1>
 
