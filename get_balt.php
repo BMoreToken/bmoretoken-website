@@ -7,7 +7,7 @@ include_once("menu.php");
     <div class="col-md-auto">
       <form method="POST" action="https://www.bmorecoin.com/request_balt.php">
         <div class="form-group" style="height:200px;"><center><br><br>
-          <label for="exampleFormControlFile1">Enter your ERC20 Address Below</label><br><br>
+          <label for="exampleFormControlFile1">Enter your ERC20 Address Below, no weird stuff to do yet, try not to sell it!</label><br><br>
           <input type="text" size="49" minlength="42" maxlength="42" id="address" name="address" required><br><br>
           <input class="btn btn-success" name='submit' value='Get 100 BALT for FREE in the next drop!' type="Submit"></center>
         </div>
