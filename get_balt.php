@@ -1,5 +1,5 @@
 <?PHP
-$title = 'Get 1 $BALT for FREE this Friday!';
+$title = 'Get 100 $BALT for FREE in the next drop!';
 include_once("menu.php");
 ?>
 <div class="container">
@@ -9,11 +9,11 @@ include_once("menu.php");
         <div class="form-group" style="height:200px;"><center><br><br>
           <label for="exampleFormControlFile1">Enter your ERC20 Address Below</label><br><br>
           <input type="text" size="49" minlength="42" maxlength="42" id="address" name="address" required><br><br>
-          <input class="btn btn-success" name='submit' value='Get 1 BALT for FREE this Friday!' type="Submit"></center>
+          <input class="btn btn-success" name='submit' value='Get 100 BALT for FREE in the next drop!' type="Submit"></center>
         </div>
       </form> 
       <hr>
-      <h3>Addresses in Next Drop on 7/22/2021</h3>
+      <h3>Addresses in Next Drop in Feburary 2022</h3>
       <div id="success"></div>
       <div id="error"></div>
       <script>
@@ -24,6 +24,6 @@ include_once("menu.php");
         }
       });
       </script>
-      <h3>Prior Drops {For 1 BMoreToken (BALT)}</h3>
+      <h3>Prior Drops {For 100 BMoreToken (BALT)}</h3>
       <li><a href='https://etherscan.io/token/0xbdd4f273c2b0f0b84a51bd733aac617d91159376'>Drop History</a></li>
 <?PHP include_once("footer.php"); ?>
