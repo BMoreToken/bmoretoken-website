@@ -29,10 +29,10 @@ window.onload=function(){
 
   function updateResult() {
     result.textContent = send_to_array.value.toString();
-    let list = send_to_array.value.toString();
-    const set = new Set([list]);
-    Array.from(set);
-    testing.textContent = Array.isArray(set) + ' ' + set;   
+    //let list = send_to_array.value.toString();
+    //const set = new Set([list]);
+    //Array.from(set);
+    //testing.textContent = Array.isArray(set) + ' ' + set;   
   }
 
   send_to_array.addEventListener('keyup', updateResult);
@@ -90,7 +90,17 @@ window.onload=function(){
     
  const object = document.getElementById('send_to_array'); 
  
- console.log('CSV Addresses' + object.value);    
+ console.log('CSV Addresses ' + object.value);    
+    
+ const myArray = object.value.split(",");
+ 
+ var arrayLength = myStringArray.length;
+    
+ for (var i = 0; i < arrayLength; i++) {
+   
+  console.log('Single Address ' + myStringArray[i]);   
+   
+ }   
     
  //const object = { a: 1, b: 2, c: 3 };
 
@@ -217,7 +227,7 @@ async function getAccount() {
       <h1>BulkSender:</h1>
       <h3>Contract: <span class="bulkaddress" id="bulkaddress"></span></h3>
       <h3>Batch Send Status: <span id="airdrop"></span></h3>
-      <p>Format: ['0x...','0x...','0x...','0x...','0x...']</p>
+      <p>Format: 0x...,0x...,0x...,0x...,0x...</p>
       <textarea id="send_to_array" placeholder="Address List"></textarea>
       Result
       <p id="result"></p>
