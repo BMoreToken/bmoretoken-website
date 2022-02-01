@@ -1,5 +1,5 @@
 <?PHP
-$title = 'BMoreToken Project Home (BALT)';
+$title = 'BMoreToken (BALT)';
 include_once('menu.php');
 ?>
 <link href="jquery.counter-analog.css" media="screen" rel="stylesheet" type="text/css" />
