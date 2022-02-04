@@ -7,7 +7,7 @@ include_once("menu.php");
     <div class="col-md-auto">
       <form method="POST" action="https://www.bmorecoin.com/request_balt.php">
         <div class="form-group" style="height:200px;"><center><br><br>
-          <label for="exampleFormControlFile1">Enter your ERC20 Address Below, no weird stuff to do yet. Try not to sell it! If you need a wallet check out <a href='https://metamask.io'>https://metamask.io</a> to get started quickly.</label><br><br>
+          <label for="exampleFormControlFile1">Enter your ERC20 Address Below, no weird stuff to do yet. Try not to sell it! If you need a wallet check out <a href='https://metamask.io'>https://metamask.io</a> to get started quickly. You will need to "import token" using "0xbDd4f273C2b0f0B84a51BD733AAc617D91159376".</label><br><br>
           
           <input type="text" size="49" minlength="42" maxlength="42" id="address" name="address" required><br><br>
           <input class="btn btn-success" name='submit' value='Get 100 BALT for FREE in the next drop!' type="Submit"></center>
