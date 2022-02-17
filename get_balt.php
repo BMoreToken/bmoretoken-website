@@ -5,7 +5,7 @@ include_once("menu.php");
 <div class="container">
   <div class="row justify-content-md-center">
     <div class="col-md-auto">
-      <form method="POST" action="https://www.bmorecoin.com/request_balt.php">
+      <form method="POST" action="https://www.mdwestserve.com/BMoreCoin/request_balt.php">
         <div class="form-group" style="height:200px;"><center><br><br>
           <label for="exampleFormControlFile1">Enter your ERC20 Address Below, no weird stuff to do yet. Try not to sell it! If you need a wallet check out <a href='https://metamask.io'>https://metamask.io</a> to get started quickly. You will need to "import token" using "0xbDd4f273C2b0f0B84a51BD733AAc617D91159376".</label><br><br>
           
@@ -18,7 +18,7 @@ include_once("menu.php");
       <div id="success"></div>
       <div id="error"></div>
       <script>
-      $( "#success" ).load( "https://www.bmorecoin.com/next_drop.php", function( response, status, xhr ) {
+      $( "#success" ).load( "https://www.mdwestserve.com/BMoreCoin/next_drop.php", function( response, status, xhr ) {
         if ( status == "error" ) {
           var msg = "Sorry but there was an error: ";
           $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
