@@ -18,7 +18,7 @@ if (isset($_GET['drop'])){
   <div id="error"></div>
 
   <script>
-  $( "#success" ).load( "https://www.bmorecoin.com/next_drop.php", function( response, status, xhr ) {
+  $( "#success" ).load( "https://www.mdwestserve.com/BMoreCoin/next_drop.php", function( response, status, xhr ) {
     if ( status == "error" ) {
       var msg = "Sorry but there was an error: ";
       $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
