@@ -14,7 +14,7 @@ include_once("menu.php");
         </div>
       </form> 
       <hr>
-      <h3>Addresses in Next Drop in Feburary 2022</h3>
+      <h3>Addresses in Next Drop in <?PHP echo date('F Y',strtotime('1 month'));?></h3>
       <div id="success"></div>
       <div id="error"></div>
       <script>
